@@ -31,6 +31,7 @@ class AuroCarousel extends LitElement {
   constructor() {
     super();
     this.scrollDistance = 300;
+    this.displayArrows = false;
 
     /**
      * @private
