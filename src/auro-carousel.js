@@ -53,6 +53,10 @@ class AuroCarousel extends LitElement {
         reflect: true
       },
       label: { type: String },
+      centerSelectedOnRender: {
+        type: String,
+        reflect: true
+      }
     };
   }
 
@@ -73,6 +77,41 @@ class AuroCarousel extends LitElement {
     this.setScrollFlags(false);
     this.setUpIntersectionObserver();
     this.setUpResizeObserver();
+    if (this.hasAttribute('centerSelectedOnRender')) {
+      this.actionOnChildrenReady();
+    }
+  }
+
+  /**
+   * function handler for anything that happens when all its children is ready
+   * @return {void}
+   */
+  actionOnChildrenReady() {
+    const promises = [];
+
+    [...this.children].forEach((child) => {
+      // here we check the 'updateComplete' property of its child, so it is only works on lit-element.
+      // Also FYI this would only work if this component is imported AFTER of its child component.
+      // Otherwise child.updateComplete would be undefined even though it is a lit-element.
+      promises.push(child.updateComplete);
+    })
+
+    Promise.all(promises).then(() => {
+      // anything to do here on resolve
+      this.scrollToSelected();
+    });
+  }
+
+  /**
+   * Scroll to the first child component that have 'selected' attribute
+   * @return {void}
+   */
+  scrollToSelected() {
+    const selectedChildren = [...this.children].find((child) => child.hasAttribute('selected'));
+
+    if (selectedChildren) {
+      this.centerElement(selectedChildren);
+    }
   }
 
   /**
