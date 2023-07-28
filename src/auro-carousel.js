@@ -20,6 +20,7 @@ import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left_es
  * @attr {Boolean} displayArrows - Forces left and right navigation to stick in DOM regardless of content width
  * @attr {Number} scrollDistance - How many pixels to scroll the carousel when the shoulder buttons are triggered.
  * @attr {String} label - The accessible name for the carousel. Logs a console warning if not set.
+ * @attr {String} centerSelected - Apply to outer auro-carousel element to automatically center the selected node on UI render.
  *
  * @slot - the elements in the carousel
  *
@@ -53,7 +54,7 @@ class AuroCarousel extends LitElement {
         reflect: true
       },
       label: { type: String },
-      centerSelectedOnRender: {
+      centerSelected: {
         type: String,
         reflect: true
       }
@@ -77,7 +78,7 @@ class AuroCarousel extends LitElement {
     this.setScrollFlags(false);
     this.setUpIntersectionObserver();
     this.setUpResizeObserver();
-    if (this.hasAttribute('centerSelectedOnRender')) {
+    if (this.hasAttribute('centerSelected')) {
       this.actionOnChildrenReady();
     }
   }
@@ -90,9 +91,9 @@ class AuroCarousel extends LitElement {
     const promises = [];
 
     [...this.children].forEach((child) => {
-      // here we check the 'updateComplete' property of its child, so it is only works on lit-element.
-      // Also FYI this would only work if this component is imported AFTER of its child component.
-      // Otherwise child.updateComplete would be undefined even though it is a lit-element.
+      // Here is the check the 'updateComplete' property of its child. Only works on lit-element.
+      // This only works if this component is imported AFTER its child component.
+      // Otherwise child.updateComplete would be undefined.
       promises.push(child.updateComplete);
     })
 
