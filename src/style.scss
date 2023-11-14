@@ -4,11 +4,11 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/utilityClasses/displayProperties';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
 
 /* stylelint-disable declaration-empty-line-before, color-function-notation, hue-degree-notation, selector-max-class, selector-class-pattern */
 
@@ -88,7 +88,7 @@
 ::slotted(*) {
   flex: 0 0 auto;
 
-  margin-left: var(--auro-size-md);
+  margin-left: var(--ds-size-200, $ds-size-200);
 }
 
 ::slotted(:first-child) {
@@ -124,11 +124,11 @@
 
     padding: 0;
 
-    border: 1px solid var(--auro-color-ui-default-on-light);
+    border: 1px solid var(--ds-color-ui-default-default, $ds-color-ui-default-default); 
     border-radius: 50%;
 
-    background: var(--auro-color-base-white);
-    color: var(--auro-color-ui-default-on-light);
+    background: var(--ds-color-base-white, $ds-color-base-white);
+    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
 
     cursor: pointer;
 
@@ -139,15 +139,15 @@
     &:hover {
       border: none;
 
-      background: var(--auro-color-ui-default-on-light);
-      color: var(--auro-color-base-white);
+      background: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
+      color: var(--ds-color-base-white, $ds-color-base-white);
     }
 
     &:active {
       border: none;
 
-      background: var(--auro-color-ui-active-on-light);
-      color: var(--auro-color-base-white);
+      background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
+      color: var(--ds-color-base-white, $ds-color-base-white);
     }
   }
 
