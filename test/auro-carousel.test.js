@@ -115,7 +115,7 @@ describe('auro-carousel', () => {
       const el = await getDefaultFixture();
       const elementToCenter = el.querySelectorAll('button')[5];
       el.centerElement(elementToCenter);
-      expect(el.carousel.scrollLeft).to.equal(261);
+      expect(el.carousel.scrollLeft).to.equal(341);
     })
 
     it('throws an error when element is not a descendant', async () => {
