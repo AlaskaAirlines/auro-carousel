@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.0.1...v2.1.0) (2023-11-16)
+
+
+### Features
+
+* **tokens:** update token prefix from auro to ds [#33](https://github.com/AlaskaAirlines/auro-carousel/issues/33) ([b8fbdeb](https://github.com/AlaskaAirlines/auro-carousel/commit/b8fbdebc0c7734267c9a29c5e31442e872195a16))
+
+
+### Performance Improvements
+
+* **gradient:** update gradient for light backgrounds [#32](https://github.com/AlaskaAirlines/auro-carousel/issues/32) ([da67c85](https://github.com/AlaskaAirlines/auro-carousel/commit/da67c850b21d3ffae78a21a8fae4a446f3dc8aef))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.0.0...v2.0.1) (2023-10-02)
 
 
