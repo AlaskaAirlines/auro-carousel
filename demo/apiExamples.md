@@ -1,34 +1,46 @@
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
 <!-- The below content is automatically added from ./../api.md -->
 
-# auro-carousel
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a># auro-carousel
 
 The auro-carousel component displays a group of elements in a scrollable container.
 
-## Properties
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>## Properties
 
 | Property         | Attribute        | Type      | Default | Description                                      |
 |------------------|------------------|-----------|---------|--------------------------------------------------|
-| [centerSelected](#centerSelected) | `centerSelected` | `String`  |         | Apply to outer auro-carousel element to automatically center the selected node on UI render. |
-| [displayArrows](#displayArrows)  | `displayArrows`  | `Boolean` |         | Forces left and right navigation to stick in DOM regardless of content width |
-| [label](#label)          | `label`          | `String`  |         | The accessible name for the carousel. Logs a console warning if not set. |
-| [scrollDistance](#scrollDistance) | `scrollDistance` | `Number`  | 300     | How many pixels to scroll the carousel when the shoulder buttons are triggered. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [centerSelected](#centerSelected) | `centerSelected` | `String`  |         | Apply to outer auro-carousel element to automatically center the selected node on UI render. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [displayArrows](#displayArrows)  | `displayArrows`  | `Boolean` |         | Forces left and right navigation to stick in DOM regardless of content width |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [label](#label)          | `label`          | `String`  |         | The accessible name for the carousel. Logs a console warning if not set. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [scrollDistance](#scrollDistance) | `scrollDistance` | `Number`  | 300     | How many pixels to scroll the carousel when the shoulder buttons are triggered. |
 
 ## Methods
 
 | Method                  | Type                  | Description                                      |
 |-------------------------|-----------------------|--------------------------------------------------|
-| [actionOnChildrenReady](#actionOnChildrenReady) | `(): void`            | Function handler for anything that happens when all its children is ready. |
-| [centerElement](#centerElement)         | `(el: Element): void` | Centers the given element inside the carousel.<br /><br />**el**: The element to center inside the carousel. Must be a descendant of the carousel. |
-| [scrollCarousel](#scrollCarousel)        | `(num: number): void` | Scrolls the carousel by the given amount.<br /><br />**num**: The number of pixels to scroll the carousel by. Positive scrolls to the<br />right, negative scrolls to the left. |
-| [scrollToSelected](#scrollToSelected)      | `(): void`            | Scroll to the first child component that have 'selected' attribute. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [actionOnChildrenReady](#actionOnChildrenReady) | `(): void`            | Function handler for anything that happens when all its children is ready. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [centerElement](#centerElement)         | `(el: Element): void` | Centers the given element inside the carousel.<br /><br />**el**: The element to center inside the carousel. Must be a descendant of the carousel. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [scrollCarousel](#scrollCarousel)        | `(num: number): void` | Scrolls the carousel by the given amount.<br /><br />**num**: The number of pixels to scroll the carousel by. Positive scrolls to the<br />right, negative scrolls to the left. |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [scrollToSelected](#scrollToSelected)      | `(): void`            | Scroll to the first child component that have 'selected' attribute. |
 
 ## Events
 
 | Event         | Type               | Description                                      |
 |---------------|--------------------|--------------------------------------------------|
-| [scrollLeft](#scrollLeft)  | `CustomEvent<any>` | when the guest clicks the 'left' carousel button |
-| [scrollRight](#scrollRight) | `CustomEvent<any>` | when the guest clicks the 'right' carousel button |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [scrollLeft](#scrollLeft)  | `CustomEvent<any>` | when the guest clicks the 'left' carousel button |
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>| [scrollRight](#scrollRight) | `CustomEvent<any>` | when the guest clicks the 'right' carousel button |
 
 ## Slots
 
@@ -37,9 +49,21 @@ The auro-carousel component displays a group of elements in a scrollable contain
 |      | the elements in the carousel |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## API Examples
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-### Default
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>## API Examples
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Default
 
 <div class="twoColDemoRow">
   <div>
@@ -66,10 +90,19 @@ The auro-carousel component displays a group of elements in a scrollable contain
     </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/default.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel>
   <auro-pane date="2020-10-10" price="$435"></auro-pane>
   <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -86,13 +119,34 @@ The auro-carousel component displays a group of elements in a scrollable contain
   <auro-pane date="2020-10-18" price="$435"></auro-pane>
   <auro-pane date="2020-10-19" price="$435"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Property Examples
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-#### centerSelected
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Property Examples
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### centerSelected
 
 Apply to the `auro-carousel` element to automatically center the selected node on UI render.
 
@@ -119,10 +173,19 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerSelected.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerSelected.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/centerSelected.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel centerSelected>
   <auro-pane date="2020-10-10" price="$435"></auro-pane>
   <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -139,11 +202,26 @@ Apply to the `auro-carousel` element to automatically center the selected node o
   <auro-pane date="2020-10-18" price="$435"></auro-pane>
   <auro-pane date="2020-10-19" price="$435"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### displayArrows
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### displayArrows
 
 Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
 
@@ -184,10 +262,19 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/displayArrows.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/displayArrows.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/displayArrows.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel displayarrows>
   <auro-pane date="2021-10-01"></auro-pane>
   <auro-pane date="2021-10-02"></auro-pane>
@@ -218,11 +305,26 @@ Using the `displayArrows` attribute will persistently show the left and right ar
   <auro-pane date="2021-10-27"></auro-pane>
   <auro-pane date="2021-10-28"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### label
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### label
 
 The accessible name for the carousel. Logs a console warning if not set.
 
@@ -249,10 +351,19 @@ The accessible name for the carousel. Logs a console warning if not set.
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel label="Flight options">
   <auro-pane date="2020-10-10" price="$435"></auro-pane>
   <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -269,11 +380,26 @@ The accessible name for the carousel. Logs a console warning if not set.
   <auro-pane date="2020-10-18" price="$435"></auro-pane>
   <auro-pane date="2020-10-19" price="$435"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-#### scrollDistance
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### scrollDistance
 
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
@@ -300,10 +426,19 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/scrollDistance.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/scrollDistance.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/scrollDistance.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel scrollDistance="200">
   <auro-pane date="2020-10-10" price="$435"></auro-pane>
   <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -320,13 +455,34 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
   <auro-pane date="2020-10-18" price="$435"></auro-pane>
   <auro-pane date="2020-10-19" price="$435"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Method Examples
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-#### centerElement
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Method Examples
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### centerElement
 
 The following example illustrates the use of the `centerElement` method. This feature will attempt top center the selected pane element when clicked if there are enough surrounding nodes. This example DOES NOT center on load.
 
@@ -369,10 +525,19 @@ This method requires the user to invoke this feature based on a click event. See
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/centerElement.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel label="Flight options" id="centerElement">
   <auro-pane date="2021-10-01"></auro-pane>
   <auro-pane date="2021-10-02"></auro-pane>
@@ -403,12 +568,27 @@ This method requires the user to invoke this feature based on a click event. See
   <auro-pane date="2021-10-27"></auro-pane>
   <auro-pane date="2021-10-28"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.js) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/centerElement.js -->
 
-```js
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```js
 // Vanilla JS example
 // -------------------------
 
@@ -426,10 +606,19 @@ export function centerElementExample() {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElementReact.js) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElementReact.js) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/centerElementReact.js -->
 
-```js
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```js
 // React example
 // -------------------------
 
@@ -448,25 +637,64 @@ const days = [...Array(28).keys()];
     </auro-pane>
   ))}
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
-### Events
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-#### scrollLeft
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Events
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### scrollLeft
 
 When the guest clicks the 'left' carousel button.
 
-#### scrollRight
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### scrollRight
 
 When the guest clicks the 'right' carousel button.
 
 </auro-accordion>
 
-### Slot Example
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 
-#### default
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>### Slot Example
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### default
 
 Used for all elements inside the scrolling carousel.
 
@@ -489,10 +717,19 @@ Used for all elements inside the scrolling carousel.
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
-```html
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```html
 <auro-carousel centerSelected>
   <auro-pane date="2020-10-10" price="$435"></auro-pane>
   <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -505,6 +742,19 @@ Used for all elements inside the scrolling carousel.
   <auro-pane date="2020-10-18" price="$435"></auro-pane>
   <auro-pane date="2020-10-19" price="$435"></auro-pane>
 </auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>```
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a><!-- AURO-GENERATED-CONTENT:END -->
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a></auro-accordion>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+
+#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>#### <a name=""></a>``<a href="#auro-carousel" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>

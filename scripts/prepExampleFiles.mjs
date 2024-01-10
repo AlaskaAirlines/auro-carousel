@@ -1,8 +1,8 @@
-let fs = require('fs');
+import fs from 'fs';
 
 function removeExport(path, type) {
-  fs.readFile(path, type, function(err, data) {
-    const exportPos = data.indexOf('export')
+  fs.readFile(path, type, (err, data) => {
+    const exportPos = data.indexOf('export');
     const exampleScript = data.substring(0, exportPos);
     const writer = fs.createWriteStream(path);
 
