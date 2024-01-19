@@ -82,9 +82,9 @@ export class AuroCarousel extends LitElement {
     if (this.hasAttribute('centerSelected')) {
 
       /**
-       * This function is called here here so that the tests will pass.
+       * This function is called here so that the tests will pass.
        * It's called again on DOMContentLoaded so that it will work when carousel
-       * content is doesn't load until after the carousel component.
+       * content doesn't load until after the carousel component.
        * e.g. loading auro-pane after auro-carousel.
        */
       this.actionOnChildrenReady();
