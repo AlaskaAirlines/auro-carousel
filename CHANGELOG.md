@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.1.0...v2.2.0) (2024-01-21)
+
+
+### Features
+
+* add suport for SSR projects [#36](https://github.com/AlaskaAirlines/auro-carousel/issues/36) ([0496029](https://github.com/AlaskaAirlines/auro-carousel/commit/0496029275c194107dfeba644cae8d12061c2697))
+
+
+### Performance Improvements
+
+* update to support node js policy ([aa33893](https://github.com/AlaskaAirlines/auro-carousel/commit/aa33893bc56f08d25addbf688504341c0edb9406))
+
 # [2.1.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.0.1...v2.1.0) (2023-11-16)
 
 
