@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.0...v2.2.1) (2024-01-27)
+
+
+### Performance Improvements
+
+* update index per SSR support ([5678137](https://github.com/AlaskaAirlines/auro-carousel/commit/5678137ea45e646ecc3fcc575093f325ad150b3a))
+
 # [2.2.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.1.0...v2.2.0) (2024-01-21)
 
 
