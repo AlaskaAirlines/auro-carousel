@@ -18,7 +18,7 @@ body:
     attributes:
       value: >
         [![See it on
-        NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-carousel?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-carousel)
+        NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-carousel?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-carousel)
   - type: textarea
     id: details
     attributes:

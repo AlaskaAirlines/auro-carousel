@@ -21,7 +21,7 @@
 
 ### Property Examples
 
-#### centerSelected
+#### `centerSelected`
 
 Apply to the `auro-carousel` element to automatically center the selected node on UI render.
 
@@ -37,7 +37,7 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 
 </auro-accordion>
 
-#### displayArrows
+#### `displayArrows`
 
 Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
 
@@ -53,7 +53,7 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 
 </auro-accordion>
 
-#### label
+#### `label`
 
 The accessible name for the carousel. Logs a console warning if not set.
 
@@ -69,7 +69,7 @@ The accessible name for the carousel. Logs a console warning if not set.
 
 </auro-accordion>
 
-#### scrollDistance
+#### `scrollDistance`
 
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
@@ -87,7 +87,7 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 ### Method Examples
 
-#### centerElement
+#### `centerElement`
 
 The following example illustrates the use of the `centerElement` method. This feature will attempt top center the selected pane element when clicked if there are enough surrounding nodes. This example DOES NOT center on load.
 
@@ -113,11 +113,11 @@ This method requires the user to invoke this feature based on a click event. See
 
 ### Events
 
-#### scrollLeft
+#### `scrollLeft`
 
 When the guest clicks the 'left' carousel button.
 
-#### scrollRight
+#### `scrollRight`
 
 When the guest clicks the 'right' carousel button.
 
@@ -133,7 +133,7 @@ Used for all elements inside the scrolling carousel.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->

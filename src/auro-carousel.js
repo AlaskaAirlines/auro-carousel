@@ -343,7 +343,6 @@ export class AuroCarousel extends LitElement {
   }
 }
 
-/* istanbul ignore else */
 // define the name of the custom component
 if (!customElements.get("auro-carousel")) {
   customElements.define("auro-carousel", AuroCarousel);
