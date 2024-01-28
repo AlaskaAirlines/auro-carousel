@@ -92,8 +92,7 @@ The auro-carousel component displays a group of elements in a scrollable contain
 
 ### Property Examples
 
-#### centerSelected
-
+#### <a name="centerSelected"></a>`centerSelected`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 Apply to the `auro-carousel` element to automatically center the selected node on UI render.
 
 <div class="exampleWrapper">
@@ -143,8 +142,7 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### displayArrows
-
+#### <a name="displayArrows"></a>`displayArrows`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
 
 <div class="exampleWrapper">
@@ -222,8 +220,7 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### label
-
+#### <a name="label"></a>`label`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 The accessible name for the carousel. Logs a console warning if not set.
 
 <div class="exampleWrapper">
@@ -273,8 +270,7 @@ The accessible name for the carousel. Logs a console warning if not set.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### scrollDistance
-
+#### <a name="scrollDistance"></a>`scrollDistance`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 <div class="exampleWrapper">
@@ -326,8 +322,7 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 ### Method Examples
 
-#### centerElement
-
+#### <a name="centerElement"></a>`centerElement`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 The following example illustrates the use of the `centerElement` method. This feature will attempt top center the selected pane element when clicked if there are enough surrounding nodes. This example DOES NOT center on load.
 
 This method requires the user to invoke this feature based on a click event. See both a vanilla JS and React example below.
@@ -454,12 +449,10 @@ const days = [...Array(28).keys()];
 
 ### Events
 
-#### scrollLeft
-
+#### <a name="scrollLeft"></a>`scrollLeft`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 When the guest clicks the 'left' carousel button.
 
-#### scrollRight
-
+#### <a name="scrollRight"></a>`scrollRight`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
 When the guest clicks the 'right' carousel button.
 
 </auro-accordion>
@@ -487,7 +480,7 @@ Used for all elements inside the scrolling carousel.
   </auro-carousel>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
