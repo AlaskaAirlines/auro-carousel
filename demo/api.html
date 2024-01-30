@@ -22,7 +22,11 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.css"
     />
+
+    <!-- legacy reference is still needed to support auro-accordion's use of legacy toke vales at this time -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/demoWrapper.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css" />
   </head>
@@ -41,6 +45,11 @@
         });
     </script>
     <script type="module" data-demo-script="true" src="../index.js"></script>
+    <script src="./api.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
+    <script>
+      initCarouselApiExamples();
+    </script>
 
     <!-- If additional elements are needed for the demo, add them here. -->
     <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js"
