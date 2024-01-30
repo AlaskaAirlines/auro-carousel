@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.2.2](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.1...v2.2.2) (2024-01-30)
+
+
+### Performance Improvements
+
+* **imports:** update docs and accordion import ([02dcc5e](https://github.com/AlaskaAirlines/auro-carousel/commit/02dcc5ed1ec8d87885c242cbd50c05dd5243d053))
+* update repo with generator clean-install [#18](https://github.com/AlaskaAirlines/auro-carousel/issues/18) ([9aefc95](https://github.com/AlaskaAirlines/auro-carousel/commit/9aefc95de1e45794a25d62405a8486bdc79a3e42))
+
 ## [2.2.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.0...v2.2.1) (2024-01-27)
 
 
