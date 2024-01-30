@@ -5,13 +5,12 @@
 
 ### Default
 
-<div class="twoColDemoRow">
-  <div>
-    <div class="exampleWrapper">
-      <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
-      <!-- AURO-GENERATED-CONTENT:END -->
-    </div>
-<auro-accordion lowProfile justifyRight>
+  <div class="exampleWrapper">
+    <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
+    <!-- AURO-GENERATED-CONTENT:END -->
+  </div>
+
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
@@ -29,7 +28,7 @@ Apply to the `auro-carousel` element to automatically center the selected node o
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/centerSelected.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerSelected.html) -->
@@ -45,7 +44,7 @@ Using the `displayArrows` attribute will persistently show the left and right ar
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/displayArrows.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/displayArrows.html) -->
@@ -61,7 +60,7 @@ The accessible name for the carousel. Logs a console warning if not set.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/label.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
@@ -77,7 +76,7 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/scrollDistance.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/scrollDistance.html) -->
@@ -97,7 +96,7 @@ This method requires the user to invoke this feature based on a click event. See
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/centerElement.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.html) -->

@@ -25,7 +25,7 @@ The following example illustrates a the default behavior of the carousel element
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
@@ -43,7 +43,7 @@ The following example illustrates a the default behavior of the carousel element
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/images.html) -->
@@ -69,7 +69,7 @@ This will create a new custom element that you can use in your HTML that will fu
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
