@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.4](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.3...v2.2.4) (2024-02-11)
+
+
+### Performance Improvements
+
+* update deps for ESM support ([ea4f12e](https://github.com/AlaskaAirlines/auro-carousel/commit/ea4f12e6db0793e4e3d3d3b75b3190d8f3df2b73))
+
 ## [2.2.3](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.2...v2.2.3) (2024-02-01)
 
 
