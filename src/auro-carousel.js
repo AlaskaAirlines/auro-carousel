@@ -10,8 +10,8 @@ import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
 import styleCss from "./style-css.js";
-import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right_es6.js';
-import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left_es6.js';
+import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.mjs';
+import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
