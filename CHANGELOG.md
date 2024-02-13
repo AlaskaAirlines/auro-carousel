@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.5](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.4...v2.2.5) (2024-02-13)
+
+
+### Performance Improvements
+
+* update auro dependencies ([9ad327f](https://github.com/AlaskaAirlines/auro-carousel/commit/9ad327ff2e7287a6974f0aa21ec7e3072089eea6))
+
 ## [2.2.4](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.3...v2.2.4) (2024-02-11)
 
 
