@@ -1,6 +1,6 @@
 import { centerElementExample } from '../apiExamples/centerElement';
 
-export function initCarouselApiExamples(initCount) {
+export function initExamples(initCount) {
   initCount = initCount || 0;
 
   try {
@@ -9,7 +9,7 @@ export function initCarouselApiExamples(initCount) {
     if (initCount <= 20) {
       // setTimeout handles issue where content is sometimes loaded after the functions get called
       setTimeout(() => {
-        initCarouselApiExamples(initCount + 1);
+        initExamples(initCount + 1);
       }, 100);
     }
   }
