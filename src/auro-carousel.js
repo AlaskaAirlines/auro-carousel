@@ -84,7 +84,7 @@ export class AuroCarousel extends LitElement {
       /**
        * This function is called here so that the tests will pass.
        * It's called again on DOMContentLoaded so that it will work when carousel
-       * content doesn't load until after the carousel component.
+       * content doesn't load until after the carousel component
        * e.g. loading auro-pane after auro-carousel.
        */
       this.actionOnChildrenReady();
