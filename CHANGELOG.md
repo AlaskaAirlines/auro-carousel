@@ -1,5 +1,48 @@
 # Semantic Release Automated Changelog
 
+## [2.2.6](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.5...v2.2.6) (2024-02-13)
+
+
+### Performance Improvements
+
+* **demo:** update demo file names [#40](https://github.com/AlaskaAirlines/auro-carousel/issues/40) ([16d883d](https://github.com/AlaskaAirlines/auro-carousel/commit/16d883dd389146b28d228c416a3f7e73c998c92c))
+
+## [2.2.5](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.4...v2.2.5) (2024-02-13)
+
+
+### Performance Improvements
+
+* update auro dependencies ([9ad327f](https://github.com/AlaskaAirlines/auro-carousel/commit/9ad327ff2e7287a6974f0aa21ec7e3072089eea6))
+
+## [2.2.4](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.3...v2.2.4) (2024-02-11)
+
+
+### Performance Improvements
+
+* update deps for ESM support ([ea4f12e](https://github.com/AlaskaAirlines/auro-carousel/commit/ea4f12e6db0793e4e3d3d3b75b3190d8f3df2b73))
+
+## [2.2.3](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.2...v2.2.3) (2024-02-01)
+
+
+### Performance Improvements
+
+* update auro dependencies ([fbf4534](https://github.com/AlaskaAirlines/auro-carousel/commit/fbf4534565039d4d02d1f13ef8b8ec295f29ccbd))
+
+## [2.2.2](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.1...v2.2.2) (2024-01-30)
+
+
+### Performance Improvements
+
+* **imports:** update docs and accordion import ([02dcc5e](https://github.com/AlaskaAirlines/auro-carousel/commit/02dcc5ed1ec8d87885c242cbd50c05dd5243d053))
+* update repo with generator clean-install [#18](https://github.com/AlaskaAirlines/auro-carousel/issues/18) ([9aefc95](https://github.com/AlaskaAirlines/auro-carousel/commit/9aefc95de1e45794a25d62405a8486bdc79a3e42))
+
+## [2.2.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.0...v2.2.1) (2024-01-27)
+
+
+### Performance Improvements
+
+* update index per SSR support ([5678137](https://github.com/AlaskaAirlines/auro-carousel/commit/5678137ea45e646ecc3fcc575093f325ad150b3a))
+
 # [2.2.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.1.0...v2.2.0) (2024-01-21)
 
 
