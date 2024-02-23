@@ -37,15 +37,13 @@
           Prism.highlightAll();
         });
     </script>
-    <script type="module" data-demo-script="true" src="../index.js"></script>
-    <script src="./index.min.js"></script>
-    <script>
-      initCarouselIndexExamples();
-    </script>
+    
+    <script type="module" data-demo-script="true">
+      import { registerComponent } from '../index.js';
+      import { initExamples } from './index.min.js';
 
-    <script type="module">
-      import { registerComponent } from "../index.js"
       registerComponent('custom-carousel');
+      initExamples();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
