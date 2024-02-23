@@ -41,27 +41,27 @@ The auro-carousel component displays a group of elements in a scrollable contain
 
 ### Default
 
-  <div class="exampleWrapper">
-    <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
-    <!-- The below content is automatically added from ./../../apiExamples/default.html -->
-    <auro-carousel>
-      <auro-pane date="2020-10-10" price="$435"></auro-pane>
-      <auro-pane date="2020-10-11" price="$435"></auro-pane>
-      <auro-pane date="2020-10-12" price="$435"></auro-pane>
-      <auro-pane date="2020-10-13" selected price="$435"></auro-pane>
-      <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
-      <auro-pane date="2020-10-15" price="$435"></auro-pane>
-      <auro-pane date="2020-10-16" price="$435"></auro-pane>
-      <auro-pane date="2020-10-17" price="$435"></auro-pane>
-      <auro-pane date="2020-10-18" price="$435"></auro-pane>
-      <auro-pane date="2020-10-19" price="$435"></auro-pane>
-      <auro-pane date="2020-10-16" price="$435"></auro-pane>
-      <auro-pane date="2020-10-17" price="$435"></auro-pane>
-      <auro-pane date="2020-10-18" price="$435"></auro-pane>
-      <auro-pane date="2020-10-19" price="$435"></auro-pane>
-    </auro-carousel>
-    <!-- AURO-GENERATED-CONTENT:END -->
-  </div>
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/default.html -->
+  <auro-carousel>
+    <auro-pane date="2020-10-10" price="$435"></auro-pane>
+    <auro-pane date="2020-10-11" price="$435"></auro-pane>
+    <auro-pane date="2020-10-12" price="$435"></auro-pane>
+    <auro-pane date="2020-10-13" selected price="$435"></auro-pane>
+    <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
+    <auro-pane date="2020-10-15" price="$435"></auro-pane>
+    <auro-pane date="2020-10-16" price="$435"></auro-pane>
+    <auro-pane date="2020-10-17" price="$435"></auro-pane>
+    <auro-pane date="2020-10-18" price="$435"></auro-pane>
+    <auro-pane date="2020-10-19" price="$435"></auro-pane>
+    <auro-pane date="2020-10-16" price="$435"></auro-pane>
+    <auro-pane date="2020-10-17" price="$435"></auro-pane>
+    <auro-pane date="2020-10-18" price="$435"></auro-pane>
+    <auro-pane date="2020-10-19" price="$435"></auro-pane>
+  </auro-carousel>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
@@ -90,7 +90,8 @@ The auro-carousel component displays a group of elements in a scrollable contain
 
 ### Property Examples
 
-#### <a name="centerSelected"></a>`centerSelected`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### centerSelected
+
 Apply to the `auro-carousel` element to automatically center the selected node on UI render.
 
 <div class="exampleWrapper">
@@ -140,7 +141,8 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="displayArrows"></a>`displayArrows`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### displayArrows
+
 Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
 
 <div class="exampleWrapper">
@@ -218,7 +220,8 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="label"></a>`label`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### label
+
 The accessible name for the carousel. Logs a console warning if not set.
 
 <div class="exampleWrapper">
@@ -268,7 +271,8 @@ The accessible name for the carousel. Logs a console warning if not set.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="scrollDistance"></a>`scrollDistance`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### scrollDistance
+
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 <div class="exampleWrapper">
@@ -320,7 +324,8 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 ### Method Examples
 
-#### <a name="centerElement"></a>`centerElement`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### centerElement
+
 The following example illustrates the use of the `centerElement` method. This feature will attempt top center the selected pane element when clicked if there are enough surrounding nodes. This example DOES NOT center on load.
 
 This method requires the user to invoke this feature based on a click event. See both a vanilla JS and React example below.
@@ -447,13 +452,13 @@ const days = [...Array(28).keys()];
 
 ### Events
 
-#### <a name="scrollLeft"></a>`scrollLeft`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
+#### scrollLeft
+
 When the guest clicks the 'left' carousel button.
 
-#### <a name="scrollRight"></a>`scrollRight`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-When the guest clicks the 'right' carousel button.
+#### scrollRight
 
-</auro-accordion>
+When the guest clicks the 'right' carousel button.
 
 ### Slot Example
 
