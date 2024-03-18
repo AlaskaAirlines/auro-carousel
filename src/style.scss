@@ -115,7 +115,7 @@
     border: 1px solid var(--ds-color-ui-default-default, $ds-color-ui-default-default); 
     border-radius: 50%;
 
-    background: var(--ds-color-base-white, $ds-color-base-white);
+    background: var(--ds-color-base-white, $ds-color-base-white); // SUGGESTION: --ds-color-background-lightest
     color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
 
     cursor: pointer;
@@ -128,14 +128,14 @@
       border: none;
 
       background: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
-      color: var(--ds-color-base-white, $ds-color-base-white);
+      color: var(--ds-color-base-white, $ds-color-base-white); // SUGGESTION: --ds-color-text-primary-inverse
     }
 
     &:active {
       border: none;
 
       background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
-      color: var(--ds-color-base-white, $ds-color-base-white);
+      color: var(--ds-color-base-white, $ds-color-base-white); // SUGGESTION: --ds-color-text-primary-inverse
     }
   }
 
