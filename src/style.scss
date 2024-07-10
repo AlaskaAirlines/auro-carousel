@@ -19,38 +19,7 @@
 }
 
 .carousel {
-  @include auro_breakpoint--sm {
-    &:before,
-    &:after {
-      position: absolute;
-      z-index: 0;
-      top: 50%;
-
-      display: block;
-      width: 8.75rem;
-      height: 100%;
-
-      background-image: var(--ds-color-background-gradient-default, $ds-color-background-gradient-default);
-
-      content: '';
-      pointer-events: none;
-    }
-
-    &:before {
-      left: 0;
-
-      transform: translateY(-50%) rotate(180deg);
-    }
-
-    &:after {
-      right: 0;
-
-      transform: translateY(-50%) ;
-    }
-  }
-
   overflow-x: scroll;
-
   scroll-behavior: smooth;
   scrollbar-width: none;
   white-space: nowrap;
@@ -92,15 +61,17 @@
 // https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
 .breakpointDetector {
   &:before {
+    display: none;
+
     @include auro_breakpoint--sm {
       content: 'sm';
     }
-
-    display: none;
   }
 }
 
 .button {
+  display: none;
+
   @include auro_breakpoint--sm {
     position: absolute;
     z-index: 1;
@@ -112,11 +83,7 @@
 
     padding: 0;
 
-    border: 1px solid var(--ds-color-ui-default-default, $ds-color-ui-default-default); 
     border-radius: 50%;
-
-    background: var(--ds-color-base-white, $ds-color-base-white);
-    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
 
     cursor: pointer;
 
@@ -126,20 +93,12 @@
 
     &:hover {
       border: none;
-
-      background: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
-      color: var(--ds-color-base-white, $ds-color-base-white);
     }
 
     &:active {
       border: none;
-
-      background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
-      color: var(--ds-color-base-white, $ds-color-base-white);
     }
   }
-
-  display: none;
 }
 
 auro-icon {
