@@ -499,21 +499,3 @@ Used for all elements inside the scrolling carousel.
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Theme Support
-
-The component may be restyled using the following code sample and changing the values of the following token(s).
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
-
-```scss
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
-
-:host {
-  --ds-auro-carousel-scroll-button-border-color: var(--ds-color-border-ui-default-default, #{$ds-color-border-ui-default-default});
-  --ds-auro-carousel-scroll-button-container-color: var(--ds-color-container-ui-secondary-default-default, #{$ds-color-container-ui-secondary-default-default});
-  --ds-auro-carousel-scroll-button-icon-color: var(--ds-color-icon-ui-default-default, #{$ds-color-icon-ui-default-default});
-}
-```
-<!-- AURO-GENERATED-CONTENT:END -->
