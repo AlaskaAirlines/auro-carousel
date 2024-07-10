@@ -3,18 +3,26 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable jsdoc/no-undefined-types, max-lines */
+/* eslint-disable jsdoc/no-undefined-types, max-lines, lit/no-invalid-html, lit/binding-positions */
 
-import { LitElement, html, css } from "lit";
+import { LitElement, css } from "lit";
+import { html } from 'lit/static-html.js';
+
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
-import styleCss from "./style-css.js";
-import colorCss from "./color-css.js";
-import tokensCss from "./tokens-css.js";
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+
+import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
+import buttonVersion from './buttonVersion';
+
+import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
+import iconVersion from './iconVersion';
 
 import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.mjs';
 import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
+
+import styleCss from "./style-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -35,6 +43,18 @@ export class AuroCarousel extends LitElement {
   constructor() {
     super();
     this.scrollDistance = 300;
+
+    const versioning = new AuroDependencyVersioning();
+
+    /**
+     * @private
+     */
+    this.buttonTag = versioning.generateTag('auro-button', buttonVersion, AuroButton);
+
+    /**
+     * @private
+     */
+    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
 
     /**
      * Whether or not the carousel is scrolled to the start.
@@ -65,11 +85,7 @@ export class AuroCarousel extends LitElement {
   }
 
   static get styles() {
-    return [
-      css`${styleCss}`,
-      css`${colorCss}`,
-      css`${tokensCss}`
-    ];
+    return [css`${styleCss}`];
   }
 
   firstUpdated() {
@@ -90,7 +106,7 @@ export class AuroCarousel extends LitElement {
        * This function is called here so that the tests will pass.
        * It's called again on DOMContentLoaded so that it will work when carousel
        * content doesn't load until after the carousel component.
-       * e.g. loading auro-pane after auro-carousel.
+       * Example is loading auro-pane after auro-carousel.
        */
       this.actionOnChildrenReady();
 
@@ -136,14 +152,18 @@ export class AuroCarousel extends LitElement {
   /**
    * Internal function to generate the HTML for the icon to use.
    * @private
-   * @param {string} svgContent - The imported svg icon.
-   * @returns {TemplateResult} - The html template for the icon.
+   * @param {string} svgContent - The SVG content to be embedded.
+   * @returns {Element} The HTML element containing the SVG icon.
    */
   generateIconHtml(svgContent) {
-    const dom = new DOMParser().parseFromString(svgContent, 'text/html'),
-      svg = dom.body.firstChild;
+    const dom = new DOMParser().parseFromString(svgContent, 'text/html');
+    const svg = dom.body.firstChild;
 
-    return svg;
+    svg.setAttribute('slot', 'svg');
+
+    const iconHtml = html`<${this.iconTag} customColor customSvg slot="icon">${svg}</${this.iconTag}>`;
+
+    return iconHtml;
   }
 
   /**
@@ -334,15 +354,15 @@ export class AuroCarousel extends LitElement {
         aria-roledescription="carousel"
         class="${classMap(carouselClassMap)}"
         @scroll=${() => this.setScrollFlags(true)} >
-        <button @click=${() => this.handleClick(false)} class="button button--left">
+        <${this.buttonTag} arialabel="chevron-left" iconOnly rounded variant="secondary" @click=${() => this.handleClick(false)} class="button button--left">
           ${this.generateIconHtml(chevronLeft.svg)}<span class="util_displayHiddenVisually">Scroll Left</span>
-        </button>
+        </${this.buttonTag}>
         <div class="container">
           <slot @slotchange=${this.handleSlotChange}></slot>
         </div>
-        <button @click=${() => this.handleClick(true)} class="button button--right">
+        <${this.buttonTag} arialabel="chevron-right" iconOnly rounded variant="secondary" @click=${() => this.handleClick(true)} class="button button--right">
           ${this.generateIconHtml(chevronRight.svg)}<span class="util_displayHiddenVisually">Scroll Right</span>
-        </button>
+        </${this.buttonTag}>
       </div>
     `;
   }
