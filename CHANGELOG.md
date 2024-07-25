@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [2.3.0-beta.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.7...v2.3.0-beta.1) (2024-07-25)
+
+
+### Features
+
+* **theming:** implement tier 3 tokens for theming support [#44](https://github.com/AlaskaAirlines/auro-carousel/issues/44) ([059650b](https://github.com/AlaskaAirlines/auro-carousel/commit/059650b7a85b2309fee994fc0811ca94b424027b))
+* **version:** implement custom versioned auro components ([1c23692](https://github.com/AlaskaAirlines/auro-carousel/commit/1c23692e7ce83c896b00c3043427e29d09f59431))
+
 ## [2.2.7](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.6...v2.2.7) (2024-02-23)
 
 
