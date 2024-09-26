@@ -11,6 +11,8 @@ import { html } from 'lit/static-html.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
 
 import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
@@ -43,6 +45,11 @@ export class AuroCarousel extends LitElement {
   constructor() {
     super();
     this.scrollDistance = 300;
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
 
     const versioning = new AuroDependencyVersioning();
 
@@ -89,6 +96,9 @@ export class AuroCarousel extends LitElement {
   }
 
   firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-carousel');
+
     this.carousel = this.renderRoot.querySelector('.carousel');
 
     if (!this.label) {
