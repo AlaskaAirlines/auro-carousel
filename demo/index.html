@@ -39,10 +39,13 @@
     </script>
     
     <script type="module" data-demo-script="true">
-      import { registerComponent } from '../index.js';
+      import { AuroCarousel } from '../src/auro-carousel.js';
+      import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
+      RuntimeUtils.default.prototype.registerComponent('custom-carousel', AuroCarousel);
+
       import { initExamples } from './index.min.js';
 
-      registerComponent('custom-carousel');
       initExamples();
     </script>
 
