@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable jsdoc/no-undefined-types, max-lines, lit/no-invalid-html, lit/binding-positions */
+/* eslint-disable max-lines, lit/no-invalid-html, lit/binding-positions */
 
 import { LitElement, css } from "lit";
 import { html } from 'lit/static-html.js';
