@@ -16,10 +16,10 @@ import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/util
 import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
 
 import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
-import buttonVersion from './buttonVersion';
+import buttonVersion from './buttonVersion.js';
 
 import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
-import iconVersion from './iconVersion';
+import iconVersion from './iconVersion.js';
 
 import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.mjs';
 import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
