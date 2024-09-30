@@ -1,5 +1,25 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.7...v3.0.0) (2024-09-30)
+
+
+### Features
+
+* add tag name as attribute when custom registered ([7699c0c](https://github.com/AlaskaAirlines/auro-carousel/commit/7699c0cb75446b296b452c41ce11ef4256ebb6a4))
+* **theming:** implement tier 3 tokens for theming support [#44](https://github.com/AlaskaAirlines/auro-carousel/issues/44) ([a6def0b](https://github.com/AlaskaAirlines/auro-carousel/commit/a6def0b0edc66c4770a4dafd5fdc45a5f1244640))
+* **version:** implement custom versioned auro components ([d8166bf](https://github.com/AlaskaAirlines/auro-carousel/commit/d8166bfa9109730b2b5d822d6711c662633e4ce2))
+
+
+### Performance Improvements
+
+* refactor custom component registration config ([59c6b0c](https://github.com/AlaskaAirlines/auro-carousel/commit/59c6b0cf7c8cdf448d5ed53515ee2e94129c98f5))
+* update dependencies ([db6ec49](https://github.com/AlaskaAirlines/auro-carousel/commit/db6ec49db16db7eaa8cd05a057ecf10d21d9b533))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #44
+
 ## [2.2.7](https://github.com/AlaskaAirlines/auro-carousel/compare/v2.2.6...v2.2.7) (2024-02-23)
 
 
