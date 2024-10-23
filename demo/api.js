@@ -1,4 +1,7 @@
 import { centerElementExample } from '../apiExamples/centerElement';
+import { AuroCarousel } from '../src/auro-carousel.js';
+
+AuroCarousel.register();
 
 export function initExamples(initCount) {
   initCount = initCount || 0;

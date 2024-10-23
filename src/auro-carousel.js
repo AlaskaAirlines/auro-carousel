@@ -95,6 +95,18 @@ export class AuroCarousel extends LitElement {
     return [css`${styleCss}`];
   }
 
+  /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-carousel"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroCarousel.register("custom-carousel") // this will register this element to <custom-carousel/>
+   *
+   */
+  static register(name = "auro-carousel") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroCarousel);
+  }
+
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
     this.runtimeUtils.handleComponentTagRename(this, 'auro-carousel');
@@ -376,9 +388,4 @@ export class AuroCarousel extends LitElement {
       </div>
     `;
   }
-}
-
-// define the name of the custom component
-if (!customElements.get("auro-carousel")) {
-  customElements.define("auro-carousel", AuroCarousel);
 }

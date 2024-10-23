@@ -1,3 +1,8 @@
+import { AuroCarousel } from '../src/auro-carousel.js';
+
+AuroCarousel.register();
+AuroCarousel.register('custom-carousel');
+
 export function initExamples(initCount) {
   initCount = initCount || 0;
 
