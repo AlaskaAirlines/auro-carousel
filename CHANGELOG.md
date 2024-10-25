@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.0.1...v3.1.0) (2024-10-25)
+
+
+### Features
+
+* **api:** add register static method [#57](https://github.com/AlaskaAirlines/auro-carousel/issues/57) ([9e74ae4](https://github.com/AlaskaAirlines/auro-carousel/commit/9e74ae466961ea66eb7e6d18033a7f883470f18d))
+
 ## [3.0.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.0.0...v3.0.1) (2024-10-08)
 
 
