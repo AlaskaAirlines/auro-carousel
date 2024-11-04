@@ -101,6 +101,7 @@
 }
 
 .button--left {
+  z-index: +1; // Ensure the gradient is behind the button without changing the order of the DOM elements
   left: 0;
 }
 
@@ -108,14 +109,31 @@
   right: 0;
 }
 
+[class^='gradient'] {
+  position: absolute;
+  top: 0;
+  width: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-500, $ds-size-500) + var(--ds-size-150, $ds-size-150));
+  height: 100%;
+}
+
+.gradient--left {
+  left: 0;
+}
+
+.gradient--right {
+  right: 0;
+}
+
 .carousel--scrolledToStart {
-  .button--left {
+  .button--left,
+  .gradient--left {
     display: none;
   }
 }
 
 .carousel--scrolledToEnd {
-  .button--right {
+  .button--right,
+  .gradient--right {
     display: none;
   }
 }
