@@ -5,7 +5,7 @@
 
 /* eslint-disable max-lines, lit/no-invalid-html, lit/binding-positions */
 
-import { LitElement, css } from "lit";
+import { LitElement } from "lit";
 import { html } from 'lit/static-html.js';
 
 import { classMap } from 'lit/directives/class-map.js';
@@ -25,6 +25,8 @@ import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.
 import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
 
 import styleCss from "./style-css.js";
+import colorCss from "./color-css.js";
+import tokensCss from "./tokens-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -92,7 +94,11 @@ export class AuroCarousel extends LitElement {
   }
 
   static get styles() {
-    return [css`${styleCss}`];
+    return [
+      styleCss,
+      colorCss,
+      tokensCss
+    ];
   }
 
   /**
@@ -380,7 +386,9 @@ export class AuroCarousel extends LitElement {
           ${this.generateIconHtml(chevronLeft.svg)}<span class="util_displayHiddenVisually">Scroll Left</span>
         </${this.buttonTag}>
         <div class="container">
+          <div class="gradient--left"></div>
           <slot @slotchange=${this.handleSlotChange}></slot>
+          <div class="gradient--right"></div>
         </div>
         <${this.buttonTag} arialabel="chevron-right" iconOnly rounded variant="secondary" @click=${() => this.handleClick(true)} class="button button--right">
           ${this.generateIconHtml(chevronRight.svg)}<span class="util_displayHiddenVisually">Scroll Right</span>

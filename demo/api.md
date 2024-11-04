@@ -499,3 +499,20 @@ Used for all elements inside the scrolling carousel.
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+### Theme Support
+
+The component may be restyled using the following code sample and changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+
+```scss
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+:host {
+  --ds-auro-carousel-gradient-color-one: var(--ds-color-background-primary-100-default, #{$ds-color-background-primary-100-default});
+  --ds-auro-carousel-gradient-color-two: transparent;
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->
