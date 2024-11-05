@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+## [3.1.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.1.0...v3.1.1) (2024-11-05)
+
+
+### Bug Fixes
+
+* add correct gradient behavior [#47](https://github.com/AlaskaAirlines/auro-carousel/issues/47) [#51](https://github.com/AlaskaAirlines/auro-carousel/issues/51) ([5c5b5e4](https://github.com/AlaskaAirlines/auro-carousel/commit/5c5b5e4a093e49c2075dd01ebff2797e973561ed))
+
+
+### Performance Improvements
+
+* cleanup bundle ([f3086db](https://github.com/AlaskaAirlines/auro-carousel/commit/f3086dba51103676e6c83024ebf2c3daa007aa46))
+
 # [3.1.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.0.1...v3.1.0) (2024-10-25)
 
 
