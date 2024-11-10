@@ -6,15 +6,15 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Carousel
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
-<!-- The below content is automatically added from ./description.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
+<!-- The below content is automatically added from ./../docs/partials/description.md -->
 `<auro-carousel>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of displaying a group of elements in a scrollable container.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-carousel use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- The below content is automatically added from ./useCases.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
+<!-- The below content is automatically added from ./../docs/partials/useCases.md -->
 The `<auro-carousel>` element should be used in situations where users may:
 
 * Scroll through multiple flight date options or shoulder dates
@@ -28,8 +28,8 @@ The `<auro-carousel>` element should be used in situations where users may:
 The following example illustrates a the default behavior of the carousel element. Notice how the toggle buttons on the left and the right only appear when there are enough nodes in that direction. This element is fully responsive whereas the l/r toggles will not appear on a mobile device and finger-swipe will operate as expected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-carousel centerSelected>
     <auro-pane date="2020-10-10" price="$435"></auro-pane>
     <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -46,8 +46,8 @@ The following example illustrates a the default behavior of the carousel element
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-carousel centerSelected>
@@ -71,8 +71,8 @@ The following example illustrates a the default behavior of the carousel element
 The following example illustrates a the default behavior of the carousel element. Notice how the toggle buttons on the left and the right only appear when there are enough nodes in that direction. This element is fully responsive whereas the l/r toggles will not appear on a mobile device and finger-swipe will operate as expected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/images.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/images.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/images.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/images.html -->
   <auro-carousel label="Images" scrolldistance="600">
     <img src="https://picsum.photos/200?random=0" alt="Random insert 0">
     <img src="https://picsum.photos/200?random=1" alt="Random insert 1">
@@ -179,8 +179,8 @@ The following example illustrates a the default behavior of the carousel element
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/images.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/images.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/images.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/images.html -->
 
 ```html
 <auro-carousel label="Images" scrolldistance="600">
@@ -304,8 +304,8 @@ AuroCarousel.register('custom-carousel');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-carousel` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/custom.html -->
   <custom-carousel label="Flight options" scrollDistance="420" id="demo1">
     <auro-pane date="2020-10-10" price="$435"></auro-pane>
     <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -326,8 +326,8 @@ This will create a new custom element that you can use in your HTML that will fu
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/custom.html -->
 
 ```html
 <custom-carousel label="Flight options" scrollDistance="420" id="demo1">

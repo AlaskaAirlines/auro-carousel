@@ -6,12 +6,12 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Carousel
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-carousel use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Examples
@@ -21,14 +21,14 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 The following example illustrates a the default behavior of the carousel element. Notice how the toggle buttons on the left and the right only appear when there are enough nodes in that direction. This element is fully responsive whereas the l/r toggles will not appear on a mobile device and finger-swipe will operate as expected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -39,14 +39,14 @@ The following example illustrates a the default behavior of the carousel element
 The following example illustrates a the default behavior of the carousel element. Notice how the toggle buttons on the left and the right only appear when there are enough nodes in that direction. This element is fully responsive whereas the l/r toggles will not appear on a mobile device and finger-swipe will operate as expected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/images.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/images.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/images.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/images.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -66,14 +66,14 @@ AuroCarousel.register('custom-carousel');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-carousel` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
