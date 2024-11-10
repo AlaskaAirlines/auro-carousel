@@ -1,4 +1,4 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -6,14 +6,14 @@
 ### Default
 
   <div class="exampleWrapper">
-    <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
+    <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/default.html) -->
     <!-- AURO-GENERATED-CONTENT:END -->
   </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/default.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -25,13 +25,13 @@
 Apply to the `auro-carousel` element to automatically center the selected node on UI render.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/centerSelected.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/centerSelected.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerSelected.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerSelected.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -41,13 +41,13 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/displayArrows.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/displayArrows.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/displayArrows.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/displayArrows.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -57,13 +57,13 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 The accessible name for the carousel. Logs a console warning if not set.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/label.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/label.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/label.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -73,13 +73,13 @@ The accessible name for the carousel. Logs a console warning if not set.
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/scrollDistance.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/scrollDistance.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/scrollDistance.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/scrollDistance.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -93,19 +93,19 @@ The following example illustrates the use of the `centerElement` method. This fe
 This method requires the user to invoke this feature based on a click event. See both a vanilla JS and React example below.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/centerElement.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/centerElement.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerElement.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.js) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerElement.js) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElementReact.js) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerElementReact.js) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -129,13 +129,13 @@ When the guest clicks the 'right' carousel button.
 Used for all elements inside the scrolling carousel.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -144,5 +144,5 @@ Used for all elements inside the scrolling carousel.
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/tokens.scss) -->
 <!-- AURO-GENERATED-CONTENT:END -->

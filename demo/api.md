@@ -1,5 +1,5 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
-<!-- The below content is automatically added from ./../api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
 
 # auro-carousel
 
@@ -42,8 +42,8 @@ The auro-carousel component displays a group of elements in a scrollable contain
 ### Default
 
   <div class="exampleWrapper">
-    <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/default.html) -->
-    <!-- The below content is automatically added from ./../../apiExamples/default.html -->
+    <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/default.html) -->
+    <!-- The below content is automatically added from ./../apiExamples/default.html -->
     <auro-carousel>
       <auro-pane date="2020-10-10" price="$435"></auro-pane>
       <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -64,8 +64,8 @@ The auro-carousel component displays a group of elements in a scrollable contain
   </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/default.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/default.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/default.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/default.html -->
 
 ```html
 <auro-carousel>
@@ -94,8 +94,8 @@ The auro-carousel component displays a group of elements in a scrollable contain
 Apply to the `auro-carousel` element to automatically center the selected node on UI render.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/centerSelected.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/centerSelected.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/centerSelected.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/centerSelected.html -->
   <auro-carousel centerSelected>
     <auro-pane date="2020-10-10" price="$435"></auro-pane>
     <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -116,8 +116,8 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerSelected.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/centerSelected.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerSelected.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/centerSelected.html -->
 
 ```html
 <auro-carousel centerSelected>
@@ -144,8 +144,8 @@ Apply to the `auro-carousel` element to automatically center the selected node o
 Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/displayArrows.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/displayArrows.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/displayArrows.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/displayArrows.html -->
   <auro-carousel displayarrows>
     <auro-pane date="2021-10-01"></auro-pane>
     <auro-pane date="2021-10-02"></auro-pane>
@@ -180,8 +180,8 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/displayArrows.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/displayArrows.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/displayArrows.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/displayArrows.html -->
 
 ```html
 <auro-carousel displayarrows>
@@ -222,8 +222,8 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 The accessible name for the carousel. Logs a console warning if not set.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/label.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/label.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/label.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/label.html -->
   <auro-carousel label="Flight options">
     <auro-pane date="2020-10-10" price="$435"></auro-pane>
     <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -244,8 +244,8 @@ The accessible name for the carousel. Logs a console warning if not set.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/label.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/label.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/label.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/label.html -->
 
 ```html
 <auro-carousel label="Flight options">
@@ -272,8 +272,8 @@ The accessible name for the carousel. Logs a console warning if not set.
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/scrollDistance.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/scrollDistance.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/scrollDistance.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/scrollDistance.html -->
   <auro-carousel scrollDistance="200">
     <auro-pane date="2020-10-10" price="$435"></auro-pane>
     <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -294,8 +294,8 @@ How many pixels to scroll the carousel when the shoulder buttons are triggered.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/scrollDistance.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/scrollDistance.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/scrollDistance.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/scrollDistance.html -->
 
 ```html
 <auro-carousel scrollDistance="200">
@@ -326,8 +326,8 @@ The following example illustrates the use of the `centerElement` method. This fe
 This method requires the user to invoke this feature based on a click event. See both a vanilla JS and React example below.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/centerElement.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/centerElement.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/centerElement.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/centerElement.html -->
   <auro-carousel label="Flight options" id="centerElement">
     <auro-pane date="2021-10-01"></auro-pane>
     <auro-pane date="2021-10-02"></auro-pane>
@@ -362,8 +362,8 @@ This method requires the user to invoke this feature based on a click event. See
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/centerElement.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerElement.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/centerElement.html -->
 
 ```html
 <auro-carousel label="Flight options" id="centerElement">
@@ -398,8 +398,8 @@ This method requires the user to invoke this feature based on a click event. See
 </auro-carousel>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElement.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/centerElement.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerElement.js) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/centerElement.js -->
 
 ```js
 // Vanilla JS example
@@ -419,8 +419,8 @@ export function centerElementExample() {
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/centerElementReact.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/centerElementReact.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/centerElementReact.js) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/centerElementReact.js -->
 
 ```js
 // React example
@@ -462,8 +462,8 @@ When the guest clicks the 'right' carousel button.
 Used for all elements inside the scrolling carousel.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-carousel centerSelected>
     <auro-pane date="2020-10-10" price="$435"></auro-pane>
     <auro-pane date="2020-10-11" price="$435"></auro-pane>
@@ -480,8 +480,8 @@ Used for all elements inside the scrolling carousel.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-carousel centerSelected>
@@ -504,8 +504,8 @@ Used for all elements inside the scrolling carousel.
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../src/tokens.scss -->
 
 ```scss
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
