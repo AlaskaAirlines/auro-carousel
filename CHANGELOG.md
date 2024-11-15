@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.2.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.1.1...v3.2.0) (2024-11-15)
+
+
+### Features
+
+* upgrade auro-library to 3.0.1 ([886f52b](https://github.com/AlaskaAirlines/auro-carousel/commit/886f52b40be5098b633afc1efc5de5a438ea5b9f))
+
+
+### Performance Improvements
+
+* update library to 3.0.2 ([3a9464f](https://github.com/AlaskaAirlines/auro-carousel/commit/3a9464f647ec94cdf156509d981842dadef59170))
+
 ## [3.1.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.1.0...v3.1.1) (2024-11-05)
 
 
