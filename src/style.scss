@@ -70,34 +70,28 @@
 }
 
 .button {
-  @include auro_breakpoint--sm {
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
 
-    display: block;
+  display: none;
 
-    padding: 0;
+  padding: 0;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    line-height: 0;
+  line-height: 0;
 
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 
-    &:hover {
-      border: none;
-    }
-
-    &:active {
-      border: none;
-    }
+  &:hover {
+    border: none;
   }
-}
 
-[auro-icon] {
-  margin-top: 3px;
+  &:active {
+    border: none;
+  }
 }
 
 .button--left {
@@ -109,11 +103,37 @@
   right: 0;
 }
 
+@include auro_breakpoint--sm {
+  .button {
+    display: block;
+  }
+
+  .carousel--scrolledToStart {
+    .button--left,
+    .gradient--left {
+      display: none;
+    }
+  }
+
+  .carousel--scrolledToEnd {
+    .button--right,
+    .gradient--right {
+      display: none;
+    }
+  }
+
+}
+
+[auro-icon] {
+  margin-top: 3px;
+}
+
 [class^='gradient'] {
   position: absolute;
   top: 0;
   width: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-500, $ds-size-500) + var(--ds-size-150, $ds-size-150));
   height: 100%;
+  pointer-events: none;
 }
 
 .gradient--left {
@@ -122,18 +142,4 @@
 
 .gradient--right {
   right: 0;
-}
-
-.carousel--scrolledToStart {
-  .button--left,
-  .gradient--left {
-    display: none;
-  }
-}
-
-.carousel--scrolledToEnd {
-  .button--right,
-  .gradient--right {
-    display: none;
-  }
 }
