@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.2.2](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.1...v3.2.2) (2024-12-17)
+
+
+### Bug Fixes
+
+* improve mobile UX for scroll behavior [#65](https://github.com/AlaskaAirlines/auro-carousel/issues/65) ([2c77ebc](https://github.com/AlaskaAirlines/auro-carousel/commit/2c77ebc5ddec33388cd5633989392ab534991f30))
+
 ## [3.2.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.0...v3.2.1) (2024-12-03)
 
 
