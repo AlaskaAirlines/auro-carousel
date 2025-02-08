@@ -63,7 +63,7 @@
   &:before {
     display: none;
 
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       content: 'sm';
     }
   }
@@ -103,7 +103,7 @@
   right: 0;
 }
 
-@include auro_breakpoint--sm {
+@include auro_grid-breakpoint--sm {
   .button {
     display: block;
   }
