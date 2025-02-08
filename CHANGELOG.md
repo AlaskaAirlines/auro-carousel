@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.2.4](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.3...v3.2.4) (2025-02-08)
+
+
+### Performance Improvements
+
+* update dependencies ([c59a216](https://github.com/AlaskaAirlines/auro-carousel/commit/c59a216531ff1a3f297e0d035019ca3d54552db9))
+* update mixin per new WCSS spec ([f3631b7](https://github.com/AlaskaAirlines/auro-carousel/commit/f3631b72f532ed63202deed9ee3e3f617af80cc0))
+
 ## [3.2.3](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.2...v3.2.3) (2024-12-20)
 
 
