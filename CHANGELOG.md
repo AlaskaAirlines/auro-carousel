@@ -1,5 +1,20 @@
 # Semantic Release Automated Changelog
 
+# [4.0.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.4...v4.0.0) (2025-02-28)
+
+
+* feat!: move peer dependencies to "real" dependencies ([fffe40d](https://github.com/AlaskaAirlines/auro-carousel/commit/fffe40dcdb4c37aef4e04c2484701482c885dc2d))
+
+
+### BREAKING CHANGES
+
+* last change was breaking _on a patch version_ because of peer dependencies
+
+Summary:
+  Our current build process relies on peer dependencies being present, but
+  the peer dependency pipeline is causing far more issues than it's worth.
+  Why not just make them regular dependencies? This is what this PR does :)
+
 ## [3.2.4](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.3...v3.2.4) (2025-02-08)
 
 
