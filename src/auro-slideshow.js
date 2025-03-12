@@ -94,20 +94,31 @@ export class AuroSlideshow extends LitElement {
         disableOnInteraction: false,
       };
 
-      swiperConfig.on.autoplayTimeLeft = (_, _, progress) => {
+      swiperConfig.on.autoplayTimeLeft = (...args) => {
+        const progress = args[args.length - 1];
         progressBar.style.width = `${(1 - progress) * 100}%`;
       };
     }
 
-    const swiper = new Swiper(swiperElement, swiperConfig);
+    this.swiper = new Swiper(swiperElement, swiperConfig);
 
     nextButton.addEventListener('click', () => {
-      swiper.slideNext();
+      this.swiper.slideNext();
     });
 
     prevButton.addEventListener('click', () => {
-      swiper.slidePrev();
+      this.swiper.slidePrev();
     });
+
+    if (this.autoplay) {
+      swiperElement.addEventListener('mouseenter', () => {
+        this.swiper.autoplay.stop();
+      });
+
+      swiperElement.addEventListener('mouseleave', () => {
+        this.swiper.autoplay.start();
+      });
+    }
   }
 
   render() {
