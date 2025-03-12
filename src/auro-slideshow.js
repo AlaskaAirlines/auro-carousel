@@ -1,6 +1,19 @@
-import { LitElement, html } from 'lit';
+import { LitElement } from 'lit';
+import { html } from 'lit/static-html.js';
+
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+
+import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
+import buttonVersion from './buttonVersion.js';
+
+import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
+import iconVersion from './iconVersion.js';
+
+import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.mjs';
+import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
 
 import slideshowCss from './slideshow-css.js';
 
@@ -12,6 +25,18 @@ export class AuroSlideshow extends LitElement {
     this.loop = false;
     this.slidesPerView = 1;
     this.spaceBetweenSlides = 30;
+
+    const versioning = new AuroDependencyVersioning();
+
+    /**
+     * @private
+     */
+    this.buttonTag = versioning.generateTag('auro-button', buttonVersion, AuroButton);
+
+    /**
+     * @private
+     */
+    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
   }
 
   static get styles() {
@@ -59,8 +84,8 @@ export class AuroSlideshow extends LitElement {
 
   initializeSwiper() {
     const swiperElement = this.shadowRoot.querySelector('.swiper');
-    const nextButton = this.shadowRoot.querySelector('.swiper-button-next');
-    const prevButton = this.shadowRoot.querySelector('.swiper-button-prev');
+    const prevButton = this.shadowRoot.querySelector('.scroll-prev');
+    const nextButton = this.shadowRoot.querySelector('.scroll-next');
     const paginationEl = this.shadowRoot.querySelector('.swiper-pagination');
     const progressBar = this.shadowRoot.querySelector('.progress-bar');
 
@@ -121,6 +146,23 @@ export class AuroSlideshow extends LitElement {
     }
   }
 
+  /**
+   * Internal function to generate the HTML for the icon to use.
+   * @private
+   * @param {string} svgContent - The SVG content to be embedded.
+   * @returns {Element} The HTML element containing the SVG icon.
+   */
+  generateIconHtml(svgContent) {
+    const dom = new DOMParser().parseFromString(svgContent, 'text/html');
+    const svg = dom.body.firstChild;
+
+    svg.setAttribute('slot', 'svg');
+
+    const iconHtml = html`<${this.iconTag} customColor customSvg slot="icon">${svg}</${this.iconTag}>`;
+
+    return iconHtml;
+  }
+
   render() {
     return html`
       <div class="swiper">
@@ -129,8 +171,14 @@ export class AuroSlideshow extends LitElement {
           <div class="swiper-slide">Slide 2</div>
           <div class="swiper-slide">Slide 3</div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <${this.buttonTag} arialabel="chevron-left" iconOnly rounded variant="secondary" class="scroll-prev">
+          ${this.generateIconHtml(chevronLeft.svg)}<span class="util_displayHiddenVisually">Scroll Left</span>
+        </${this.buttonTag}>
+
+        <${this.buttonTag} arialabel="chevron-right" iconOnly rounded variant="secondary" class="scroll-next">
+          ${this.generateIconHtml(chevronRight.svg)}<span class="util_displayHiddenVisually">Scroll Right</span>
+        </${this.buttonTag}>
+  
         <div class="swiper-pagination"></div>
 
         <div class="progress-bar-container">

@@ -36,8 +36,8 @@
   width: 40%;
 }
 
- /* Progress bar styling */
- .progress-bar-container {
+/* Progress bar styling */
+.progress-bar-container {
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -58,3 +58,24 @@
 .swiper {
   position: relative; /* Needed for absolute positioning of the progress bar */
 }
+
+.scroll-prev, 
+.scroll-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-prev { 
+  left: 10px; 
+}
+
+.scroll-next { 
+  right: 10px; 
+}
+
+
