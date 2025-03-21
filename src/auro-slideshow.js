@@ -15,6 +15,8 @@ import iconVersion from './iconVersion.js';
 import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.mjs';
 import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
 
+import arrowUp from '@alaskaairux/icons/dist/icons/interface/arrow-up.mjs';
+
 import slideshowCss from './slideshow-css.js';
 
 export class AuroSlideshow extends LitElement {
@@ -22,6 +24,8 @@ export class AuroSlideshow extends LitElement {
     super();
 
     this.autoplay = undefined;
+    this.pagination = false;
+    this.navigation = false;
     this.loop = false;
     this.slidesPerView = 1;
     this.spaceBetweenSlides = 30;
@@ -62,6 +66,22 @@ export class AuroSlideshow extends LitElement {
       },
 
       /**
+       * If true, the slideshow will display navigation arrows for manual slide navigation.
+       */
+      navigation: {
+        type: Boolean,
+        reflect: true
+      },
+
+      /**
+       * If true, the slideshow will display pagination bullets for each slide.
+       */
+      pagination: {
+        type: Boolean,
+        reflect: true
+      },
+
+      /**
        * The number of slides per view. Defaults to 1.
        */
       slidesPerView: {
@@ -94,6 +114,7 @@ export class AuroSlideshow extends LitElement {
     const swiperWrapper = this.shadowRoot.querySelector('.swiper-wrapper');
     const prevButton = this.shadowRoot.querySelector('.scroll-prev');
     const nextButton = this.shadowRoot.querySelector('.scroll-next');
+    const playPauseButton = this.shadowRoot.querySelector('.play-pause');
     const paginationEl = this.shadowRoot.querySelector('.swiper-pagination');
     const progressBar = this.shadowRoot.querySelector('.progress-bar');
     const slot = this.shadowRoot.querySelector('slot');
@@ -103,13 +124,18 @@ export class AuroSlideshow extends LitElement {
     }
   
     // Get the assigned slides from the slot
-    const assignedSlides = slot.assignedElements().filter(el => el.classList.contains('swiper-slide'));
+    const assignedSlides = slot.assignedElements();
     
     // Avoid reinitializing Swiper if there are no slides or if the Swiper is already initialized
     if (assignedSlides.length === 0) {
       console.warn("No slides found inside slot.");
       return; // Avoid initializing if no slides are present
     }
+
+    assignedSlides.forEach(slide => {
+      slide.classList.add('swiper-slide');
+      slide.part = 'slide';
+    });
   
     // Detach the slotchange listener to prevent it from firing while manipulating the slot content
     slot.removeEventListener('slotchange', this.slotChangeListener);
@@ -124,18 +150,23 @@ export class AuroSlideshow extends LitElement {
     }
   
     const swiperConfig = {
-      modules: [Navigation, Pagination],
-      loop: this.loop, // Enable loop only if there are enough slides
-      slidesPerView: "auto", // Ensure slidesPerView does not exceed total slides
+      modules: [Navigation, Pagination, Autoplay],
+      loop: this.loop,
+      slidesPerView: "auto",
       spaceBetween: this.spaceBetweenSlides,
-      pagination: {
-        el: paginationEl,
-        clickable: true,
-      },
-      navigation: {
+      centeredSlides: true,
+      autoplay: this.autoplay ? {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      } : false,
+      navigation: this.navigation ? {
         nextEl: nextButton,
         prevEl: prevButton,
-      },
+      } : false,
+      pagination: this.pagination ? {
+        el: paginationEl,
+      } : false,
       on: {
         slideChangeTransitionStart() {
           progressBar.style.width = '0%';
@@ -145,27 +176,44 @@ export class AuroSlideshow extends LitElement {
         }
       }
     };
-  
-    // Add autoplay if defined
-    if (this.autoplay) {
-      swiperConfig.modules.push(Autoplay);
-      swiperConfig.autoplay = {
-        delay: this.autoplay,
-        disableOnInteraction: false,
+
+    if (this.pagination) {
+      swiperConfig.pagination = {
+        el: paginationEl,
+        clickable: true,
       };
+    }
+
+    if (this.navigation) {
+      swiperConfig.navigation = {
+        nextEl: nextButton,
+        prevEl: prevButton,
+      };
+    }
   
+    if (this.autoplay) {
       swiperConfig.on.autoplayTimeLeft = (...args) => {
         const progress = args[args.length - 1];
         progressBar.style.width = `${(1 - progress) * 100}%`;
       };
+
+      playPauseButton.addEventListener('click', () => {
+        if (this.swiper.autoplay.running) {
+          this.swiper.autoplay.stop();
+          playPauseButton.setAttribute('aria-label', 'play');
+        } else {
+          this.swiper.autoplay.start();
+          playPauseButton.setAttribute('aria-label', 'pause');
+        }
+      });
     }
   
     // If the Swiper instance exists, just update it with the new slides
     if (this.swiper) {
-      this.swiper.update(); // Update Swiper to handle the new slides
+      this.swiper.update();
+    } else {
+      this.swiper = new Swiper(swiperElement, swiperConfig);
     }
-
-    this.swiper = new Swiper(swiperElement, swiperConfig);
   
     // Event listeners for navigation buttons
     nextButton.addEventListener('click', () => {
@@ -175,17 +223,6 @@ export class AuroSlideshow extends LitElement {
     prevButton.addEventListener('click', () => {
       this.swiper.slidePrev();
     });
-  
-    // Autoplay controls for mouse hover
-    if (this.autoplay) {
-      swiperElement.addEventListener('mouseenter', () => {
-        this.swiper.autoplay.stop();
-      });
-  
-      swiperElement.addEventListener('mouseleave', () => {
-        this.swiper.autoplay.start();
-      });
-    }
   
     // Reattach the slotchange event listener after the swiper is initialized
     slot.addEventListener('slotchange', this.slotChangeListener);
@@ -210,23 +247,34 @@ export class AuroSlideshow extends LitElement {
 
   render() {
     return html`
+      ${this.navigation ? html`
+        <${this.buttonTag} arialabel="chevron-left" iconOnly rounded variant="secondary" class="scroll-prev">
+          ${this.generateIconHtml(chevronLeft.svg)}
+          <span class="util_displayHiddenVisually">Scroll Left</span>
+        </${this.buttonTag}>
+
+        <${this.buttonTag} arialabel="chevron-right" iconOnly rounded variant="secondary" class="scroll-next">
+          ${this.generateIconHtml(chevronRight.svg)}
+          <span class="util_displayHiddenVisually">Scroll Right</span>
+        </${this.buttonTag}>
+      ` : undefined }
       <div class="swiper">
         <div class="swiper-wrapper">
           <slot></slot>
         </div>
-        <${this.buttonTag} arialabel="chevron-left" iconOnly rounded variant="secondary" class="scroll-prev">
-          ${this.generateIconHtml(chevronLeft.svg)}<span class="util_displayHiddenVisually">Scroll Left</span>
-        </${this.buttonTag}>
-
-        <${this.buttonTag} arialabel="chevron-right" iconOnly rounded variant="secondary" class="scroll-next">
-          ${this.generateIconHtml(chevronRight.svg)}<span class="util_displayHiddenVisually">Scroll Right</span>
-        </${this.buttonTag}>
   
-        <div class="swiper-pagination"></div>
-
         <div class="progress-bar-container">
           <div class="progress-bar"></div>
         </div>
+      </div>
+
+      <div class="pagination-container">
+        <${this.buttonTag} arialabel="play-pause" iconOnly rounded class="play-pause">
+          ${this.generateIconHtml(arrowUp.svg)}
+          <span class="util_displayHiddenVisually">Play/Pause</span>
+        </${this.buttonTag}>
+
+        <div class="swiper-pagination"></div>
       </div>
     `;
   }

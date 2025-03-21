@@ -22,10 +22,105 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/demoWrapper.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/elementDemoStyles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
-    <auro-slideshow></auro-slideshow>
+    <!-- <auro-slideshow loop pagination navigation>
+      <div>Slide 1</div>
+      <div>Slide 2</div>
+      <div>Slide 3</div>
+    </auro-slideshow> -->
+
+    <auro-slideshow loop pagination navigation autoplay="2500">
+      <img src="https://picsum.photos/200?random=0" style="height: 300px; width: 600px;" alt="Random insert 0">
+      <img src="https://picsum.photos/200?random=1" style="height: 300px; width: 200px;" alt="Random insert 1">
+      <img src="https://picsum.photos/200?random=2" style="height: 300px; width: 300px;" alt="Random insert 2">
+      <img src="https://picsum.photos/200?random=3" style="height: 300px; width: 500px;" alt="Random insert 3">
+      <img src="https://picsum.photos/200?random=4" style="height: 300px; width: 400px;" alt="Random insert 4">
+      <img src="https://picsum.photos/200?random=5" style="height: 300px; width: 300px;" alt="Random insert 5">
+    </auro-slideshow>
+
+    <!-- <auro-slideshow loop pagination navigation slidesPerView="6" spaceBetweenSlides="2">
+      <auro-pane date="2020-10-10" price="$435"></auro-pane>
+      <auro-pane date="2020-10-11" price="$435"></auro-pane>
+      <auro-pane date="2020-10-12" price="$435"></auro-pane>
+      <auro-pane date="2020-10-13" selected price="$666"></auro-pane>
+      <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
+      <auro-pane date="2020-10-15" price="$435"></auro-pane>
+      <auro-pane date="2020-10-16" price="$435"></auro-pane>
+      <auro-pane date="2020-10-17" price="$435"></auro-pane>
+      <auro-pane date="2020-10-18" price="$435"></auro-pane>
+      <auro-pane date="2020-10-19" price="$435"></auro-pane>
+      <auro-pane date="2020-10-10" price="$435"></auro-pane>
+      <auro-pane date="2020-10-11" price="$435"></auro-pane>
+      <auro-pane date="2020-10-12" price="$435"></auro-pane>
+      <auro-pane date="2020-10-13" selected price="$666"></auro-pane>
+      <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
+      <auro-pane date="2020-10-15" price="$435"></auro-pane>
+      <auro-pane date="2020-10-16" price="$435"></auro-pane>
+      <auro-pane date="2020-10-17" price="$435"></auro-pane>
+      <auro-pane date="2020-10-18" price="$435"></auro-pane>
+      <auro-pane date="2020-10-19" price="$435"></auro-pane>
+      <auro-pane date="2020-10-10" price="$435"></auro-pane>
+      <auro-pane date="2020-10-11" price="$435"></auro-pane>
+      <auro-pane date="2020-10-12" price="$435"></auro-pane>
+      <auro-pane date="2020-10-13" selected price="$666"></auro-pane>
+      <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
+      <auro-pane date="2020-10-15" price="$435"></auro-pane>
+      <auro-pane date="2020-10-16" price="$435"></auro-pane>
+      <auro-pane date="2020-10-17" price="$435"></auro-pane>
+      <auro-pane date="2020-10-18" price="$435"></auro-pane>
+      <auro-pane date="2020-10-19" price="$435"></auro-pane>
+      <auro-pane date="2020-10-10" price="$435"></auro-pane>
+      <auro-pane date="2020-10-11" price="$435"></auro-pane>
+      <auro-pane date="2020-10-12" price="$435"></auro-pane>
+      <auro-pane date="2020-10-13" selected price="$666"></auro-pane>
+      <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
+      <auro-pane date="2020-10-15" price="$435"></auro-pane>
+      <auro-pane date="2020-10-16" price="$435"></auro-pane>
+      <auro-pane date="2020-10-17" price="$435"></auro-pane>
+      <auro-pane date="2020-10-18" price="$435"></auro-pane>
+      <auro-pane date="2020-10-19" price="$435"></auro-pane>
+    </auro-slideshow> -->
+
+    <script type="module" src="../src/auro-slideshow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
+
+    <!-- If additional elements are needed for the demo, add them here. -->
+    <script src="https://unpkg.com/@aurodesignsystem/auro-pane@latest/dist/auro-pane__bundled.js" type="module"></script>
+  </body>
+</html>
+
+
+
+
+
+
+<!-- <script>
+      setTimeout(() => {
+        // Find the swiper-wrapper inside the auro-slideshow component
+        const swiperWrapper = document.querySelector('auro-slideshow').shadowRoot.querySelector('.swiper-wrapper');
+        
+        // Create and append new slides to the swiper-wrapper
+        const newSlide1 = document.createElement('div');
+        newSlide1.classList.add('swiper-slide');
+        newSlide1.innerHTML = 'Slide 4';
+        
+        const newSlide2 = document.createElement('div');
+        newSlide2.classList.add('swiper-slide');
+        newSlide2.innerHTML = 'Slide 5';
+        
+        swiperWrapper.appendChild(newSlide1);
+        swiperWrapper.appendChild(newSlide2);
+
+        // Update the Swiper instance to reflect the new slides
+        const swiperElement = document.querySelector('auro-slideshow').shadowRoot.querySelector('.swiper');
+        const swiper = swiperElement.swiper; // Access the existing Swiper instance
+
+        if (swiper) {
+          swiper.update(); // Update the Swiper instance to reflect new slides
+        }
+      }, 5000);
+    </script> -->
 
     <!-- <main></main>
     <script type="module">
@@ -45,11 +140,3 @@
 
       initExamples();
     </script> -->
-
-    <script type="module" src="../src/auro-slideshow.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
-
-    <!-- If additional elements are needed for the demo, add them here. -->
-    <script src="https://unpkg.com/@aurodesignsystem/auro-pane@latest/dist/auro-pane__bundled.js" type="module"></script>
-  </body>
-</html>
