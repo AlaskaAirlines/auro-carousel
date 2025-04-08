@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.0.0...v4.0.1) (2025-04-08)
+
+
+### Performance Improvements
+
+* add wca script for docs api ([b7febe0](https://github.com/AlaskaAirlines/auro-carousel/commit/b7febe0e1a33812b424cb199c83d8ff24383772b))
+
 # [4.0.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v3.2.4...v4.0.0) (2025-02-28)
 
 
