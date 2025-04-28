@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.2](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.0.1...v4.0.2) (2025-04-28)
+
+
+### Performance Improvements
+
+* update to use new color theming tokens [#81](https://github.com/AlaskaAirlines/auro-carousel/issues/81) ([592f485](https://github.com/AlaskaAirlines/auro-carousel/commit/592f48562f5c2a92e2d250b51e2567ada6a4bba1))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.0.0...v4.0.1) (2025-04-08)
 
 
