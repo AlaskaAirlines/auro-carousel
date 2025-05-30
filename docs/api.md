@@ -32,3 +32,9 @@ The auro-carousel component displays a group of elements in a scrollable contain
 | Name | Description                  |
 |------|------------------------------|
 |      | the elements in the carousel |
+
+## CSS Shadow Parts
+
+| Part      | Description                                     |
+|-----------|-------------------------------------------------|
+| `wrapper` | The primary root HTML element of the component. |
