@@ -39,6 +39,8 @@ import tokensCss from "./tokens-css.js";
  *
  * @slot - the elements in the carousel
  *
+ * @csspart wrapper - The primary root HTML element of the component.
+ *
  * @event scrollRight - when the guest clicks the 'right' carousel button
  * @event scrollLeft - when the guest clicks the 'left' carousel button
  */
@@ -370,6 +372,7 @@ export class AuroCarousel extends LitElement {
 
   render() {
     const carouselClassMap = {
+      "wrapper": true,
       "carousel": true,
       "carousel--scrolledToStart": this.scrolledToStart && !this.displayArrows,
       "carousel--scrolledToEnd": this.scrolledToEnd && !this.displayArrows
@@ -381,6 +384,7 @@ export class AuroCarousel extends LitElement {
         aria-label="${ifDefined(this.label)}"
         aria-roledescription="carousel"
         class="${classMap(carouselClassMap)}"
+        part="wrapper"
         @scroll=${() => this.setScrollFlags(true)} >
         <${this.buttonTag} arialabel="chevron-left" iconOnly rounded variant="secondary" @click=${() => this.handleClick(false)} class="button button--left">
           ${this.generateIconHtml(chevronLeft.svg)}<span class="util_displayHiddenVisually">Scroll Left</span>
