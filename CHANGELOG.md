@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.0.2...v4.1.0) (2025-05-30)
+
+
+### Features
+
+* add CSS Part to enable styling ([2116ae1](https://github.com/AlaskaAirlines/auro-carousel/commit/2116ae199720d662b8b0af1c646e6d96e24fa6e3))
+
 ## [4.0.2](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.0.1...v4.0.2) (2025-04-28)
 
 
