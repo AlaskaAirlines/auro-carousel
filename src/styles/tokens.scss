@@ -1,0 +1,7 @@
+@use "./../node_modules/@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska" as v;
+
+:host {
+  --ds-auro-carousel-gradient-color-one: var(--ds-basic-color-surface-default, #{v.$ds-basic-color-surface-default});
+  --ds-auro-carousel-gradient-color-two: transparent;
+}
+  
