@@ -21,12 +21,9 @@ import buttonVersion from './buttonVersion.js';
 import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
 import iconVersion from './iconVersion.js';
 
-import chevronRight from '@alaskaairux/icons/dist/icons/interface/chevron-right.mjs';
-import chevronLeft from '@alaskaairux/icons/dist/icons/interface/chevron-left.mjs';
-
-import styleCss from "./style-css.js";
-import colorCss from "./color-css.js";
-import tokensCss from "./tokens-css.js";
+import styleCss from "./styles/style-css.js";
+import colorCss from "./styles/color-css.js";
+import tokensCss from "./styles/tokens-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -177,23 +174,6 @@ export class AuroCarousel extends LitElement {
     if (selectedChildren) {
       this.centerElement(selectedChildren);
     }
-  }
-
-  /**
-   * Internal function to generate the HTML for the icon to use.
-   * @private
-   * @param {string} svgContent - The SVG content to be embedded.
-   * @returns {Element} The HTML element containing the SVG icon.
-   */
-  generateIconHtml(svgContent) {
-    const dom = new DOMParser().parseFromString(svgContent, 'text/html');
-    const svg = dom.body.firstChild;
-
-    svg.setAttribute('slot', 'svg');
-
-    const iconHtml = html`<${this.iconTag} customColor customSvg slot="icon">${svg}</${this.iconTag}>`;
-
-    return iconHtml;
   }
 
   /**
@@ -386,16 +366,31 @@ export class AuroCarousel extends LitElement {
         class="${classMap(carouselClassMap)}"
         part="wrapper"
         @scroll=${() => this.setScrollFlags(true)} >
-        <${this.buttonTag} arialabel="chevron-left" iconOnly rounded variant="secondary" @click=${() => this.handleClick(false)} class="button button--left">
-          ${this.generateIconHtml(chevronLeft.svg)}<span class="util_displayHiddenVisually">Scroll Left</span>
+        
+        <!-- Left button -->
+        <${this.buttonTag} 
+          aria-label="Scroll Left"
+          shape="circle"
+          variant="secondary" 
+          @click=${() => this.handleClick(false)} 
+          class="button button--left">
+          <${this.iconTag} customColor category="interface" name="chevron-left"></${this.iconTag}>
         </${this.buttonTag}>
+        
         <div class="container">
           <div class="gradient--left"></div>
           <slot @slotchange=${this.handleSlotChange}></slot>
           <div class="gradient--right"></div>
         </div>
-        <${this.buttonTag} arialabel="chevron-right" iconOnly rounded variant="secondary" @click=${() => this.handleClick(true)} class="button button--right">
-          ${this.generateIconHtml(chevronRight.svg)}<span class="util_displayHiddenVisually">Scroll Right</span>
+        
+        <!-- Right button -->
+        <${this.buttonTag} 
+          aria-label="Scroll Right"
+          shape="circle"
+          variant="secondary" 
+          @click=${() => this.handleClick(true)} 
+          class="button button--right">
+          <${this.iconTag} customColor category="interface" name="chevron-right"></${this.iconTag}>
         </${this.buttonTag}>
       </div>
     `;

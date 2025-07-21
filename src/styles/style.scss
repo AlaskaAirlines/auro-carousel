@@ -4,18 +4,17 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables";
+@use "@aurodesignsystem/design-tokens/dist/legacy/auro-classic/SCSSVariables" as vac;
 
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+@use "@aurodesignsystem/webcorestylesheets/src/breakpoints" as bp;
+@use "@aurodesignsystem/webcorestylesheets/src/core";
 
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties';
+@use "@aurodesignsystem/webcorestylesheets/src/utilityClasses/displayProperties";
 
 /* stylelint-disable declaration-empty-line-before, color-function-notation, hue-degree-notation, selector-max-class, selector-class-pattern */
 
 :host {
   position: relative;
-
   display: block;
 }
 
@@ -46,7 +45,7 @@
 ::slotted(*) {
   flex: 0 0 auto;
 
-  margin-left: var(--ds-size-200, $ds-size-200);
+  margin-left: var(--ds-size-200, vac.$ds-size-200);
 }
 
 ::slotted(:first-child) {
@@ -64,26 +63,19 @@
   &:before {
     display: none;
 
-    @include auro_grid-breakpoint--sm {
+    @include bp.auro_grid-breakpoint--sm {
       content: 'sm';
     }
   }
 }
 
 .button {
+  display: none;
   position: absolute;
   top: 50%;
-
-  display: none;
-
   padding: 0;
-
   border-radius: 50%;
-
   cursor: pointer;
-
-  line-height: 0;
-
   transform: translateY(-50%);
 
   &:hover {
@@ -104,7 +96,7 @@
   right: 0;
 }
 
-@include auro_grid-breakpoint--sm {
+@include bp.auro_grid-breakpoint--sm {
   .button {
     display: block;
   }
@@ -132,7 +124,7 @@
 [class^='gradient'] {
   position: absolute;
   top: 0;
-  width: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-500, $ds-size-500) + var(--ds-size-150, $ds-size-150));
+  width: calc(var(--ds-size-1000, vac.$ds-size-1000) + var(--ds-size-500, vac.$ds-size-500) + var(--ds-size-150, vac.$ds-size-150));
   height: 100%;
   pointer-events: none;
 }

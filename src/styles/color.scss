@@ -5,7 +5,7 @@
 
 /* stylelint-disable selector-class-pattern */
 
-@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
+@use "@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska" as v;
 
 :host {
   .gradient {
