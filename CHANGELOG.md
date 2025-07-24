@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [4.1.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.1.0...v4.1.1) (2025-07-24)
+
+
+### Bug Fixes
+
+* add themeable type classes ([bea5d2c](https://github.com/AlaskaAirlines/auro-carousel/commit/bea5d2c42bdf46ec528d5f34ca51030e6368d48d))
+* linter errors ([b76de2a](https://github.com/AlaskaAirlines/auro-carousel/commit/b76de2a2ac6b134ac30a370502ccee352a2b440c))
+* update docs head content ([d5c6b0a](https://github.com/AlaskaAirlines/auro-carousel/commit/d5c6b0a516ca583bca3e73264a5df9235f12ff6c))
+
 # [4.1.0](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.0.2...v4.1.0) (2025-05-30)
 
 
