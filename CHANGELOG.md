@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.1.2](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.1.1...v4.1.2) (2025-08-15)
+
+
+### Bug Fixes
+
+* update auro-library to latest version ([8bf7b85](https://github.com/AlaskaAirlines/auro-carousel/commit/8bf7b85eeead6486b1cf56bd8b5257dabd93ad8c))
+
 ## [4.1.1](https://github.com/AlaskaAirlines/auro-carousel/compare/v4.1.0...v4.1.1) (2025-07-24)
 
 
