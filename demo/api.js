@@ -1,7 +1,5 @@
 import { centerElementExample } from "../apiExamples/centerElement";
-import { AuroCarousel } from "../src/auro-carousel.js";
-
-AuroCarousel.register();
+import "../src/registered";
 
 export function initExamples(initCount) {
   //biome-ignore lint: going to refactor this file later

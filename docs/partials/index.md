@@ -58,7 +58,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroCarousel.register(name)` method and pass in a unique name.
 
 ```js
-import { AuroCarousel } from './src/auro-carousel.js';
+import { AuroCarousel } from '@aurodesignsystem/auro-carousel/class';
 
 AuroCarousel.register('custom-carousel');
 ```

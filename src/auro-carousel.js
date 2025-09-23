@@ -21,9 +21,9 @@ import buttonVersion from "./buttonVersion.js";
 import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
 import iconVersion from "./iconVersion.js";
 
-import colorCss from "./styles/color-css.js";
-import styleCss from "./styles/style-css.js";
-import tokensCss from "./styles/tokens-css.js";
+import colorCss from "./styles/color.scss";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**

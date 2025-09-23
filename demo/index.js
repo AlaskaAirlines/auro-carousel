@@ -1,4 +1,4 @@
-import { AuroCarousel } from "../src/auro-carousel.js";
+import { AuroCarousel } from "../src/index";
 
 AuroCarousel.register();
 AuroCarousel.register("custom-carousel");
