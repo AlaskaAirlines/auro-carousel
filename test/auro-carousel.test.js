@@ -1,6 +1,6 @@
 import { expect, fixture, html, waitUntil } from "@open-wc/testing";
 import { ifDefined } from "lit/directives/if-defined.js";
-import "../index.js";
+import "../src/registered";
 
 describe("auro-carousel", () => {
   it("auro-carousel is accessible", async () => {
