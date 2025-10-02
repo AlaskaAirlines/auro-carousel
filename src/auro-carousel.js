@@ -15,10 +15,10 @@ import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/util
 
 import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 
-import { AuroButton } from "@aurodesignsystem/auro-button/src/auro-button.js";
+import { AuroButton } from "@aurodesignsystem/auro-button/class";
 import buttonVersion from "./buttonVersion.js";
 
-import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
+import { AuroIcon } from "@aurodesignsystem/auro-icon/class";
 import iconVersion from "./iconVersion.js";
 
 import colorCss from "./styles/color.scss";
