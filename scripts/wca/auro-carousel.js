@@ -1,5 +1,4 @@
-
-import { AuroCarousel } from '../../src/auro-carousel.js';
+import { AuroCarousel } from "../../src/auro-carousel.js";
 
 /**
  * The auro-carousel component displays a group of elements in a scrollable container.

@@ -6,24 +6,24 @@
 /* eslint-disable max-lines, lit/no-invalid-html, lit/binding-positions */
 
 import { LitElement } from "lit";
-import { html } from 'lit/static-html.js';
+import { html } from "lit/static-html.js";
 
-import { classMap } from 'lit/directives/class-map.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
+import { classMap } from "lit/directives/class-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
 
-import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 
-import { AuroButton } from '@aurodesignsystem/auro-button/src/auro-button.js';
-import buttonVersion from './buttonVersion.js';
+import { AuroButton } from "@aurodesignsystem/auro-button/class";
+import buttonVersion from "./buttonVersion.js";
 
-import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
-import iconVersion from './iconVersion.js';
+import { AuroIcon } from "@aurodesignsystem/auro-icon/class";
+import iconVersion from "./iconVersion.js";
 
-import styleCss from "./styles/style-css.js";
-import colorCss from "./styles/color-css.js";
-import tokensCss from "./styles/tokens-css.js";
+import colorCss from "./styles/color.scss";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -57,12 +57,16 @@ export class AuroCarousel extends LitElement {
     /**
      * @private
      */
-    this.buttonTag = versioning.generateTag('auro-button', buttonVersion, AuroButton);
+    this.buttonTag = versioning.generateTag(
+      "auro-button",
+      buttonVersion,
+      AuroButton,
+    );
 
     /**
      * @private
      */
-    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+    this.iconTag = versioning.generateTag("auro-icon", iconVersion, AuroIcon);
 
     /**
      * Whether or not the carousel is scrolled to the start.
@@ -79,25 +83,21 @@ export class AuroCarousel extends LitElement {
 
   static get properties() {
     return {
-      displayArrows: {type: Boolean},
+      displayArrows: { type: Boolean },
       scrollDistance: {
         type: Number,
-        reflect: true
+        reflect: true,
       },
       label: { type: String },
       centerSelected: {
         type: String,
-        reflect: true
-      }
+        reflect: true,
+      },
     };
   }
 
   static get styles() {
-    return [
-      styleCss,
-      colorCss,
-      tokensCss
-    ];
+    return [styleCss, colorCss, tokensCss];
   }
 
   /**
@@ -114,21 +114,22 @@ export class AuroCarousel extends LitElement {
 
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
-    this.runtimeUtils.handleComponentTagRename(this, 'auro-carousel');
+    this.runtimeUtils.handleComponentTagRename(this, "auro-carousel");
 
-    this.carousel = this.renderRoot.querySelector('.carousel');
+    this.carousel = this.renderRoot.querySelector(".carousel");
 
     if (!this.label) {
       // eslint-disable-next-line no-console
-      console.warn('Label should be provided to auro-carousel for carousel to be accessible');
+      console.warn(
+        "Label should be provided to auro-carousel for carousel to be accessible",
+      );
     }
 
     this.setScrollFlags(false);
     this.setUpIntersectionObserver();
     this.setUpResizeObserver();
 
-    if (this.hasAttribute('centerSelected')) {
-
+    if (this.hasAttribute("centerSelected")) {
       /**
        * This function is called here so that the tests will pass.
        * It's called again on DOMContentLoaded so that it will work when carousel
@@ -151,7 +152,6 @@ export class AuroCarousel extends LitElement {
     const promises = [];
 
     [...this.children].forEach((child) => {
-
       // Here is the check the 'updateComplete' property of its child. Only works on lit-element.
       // This only works if this component is imported AFTER its child component.
       // Otherwise child.updateComplete would be undefined.
@@ -169,7 +169,9 @@ export class AuroCarousel extends LitElement {
    * @return {void}
    */
   scrollToSelected() {
-    const selectedChildren = [...this.children].find((child) => child.hasAttribute('selected'));
+    const selectedChildren = [...this.children].find((child) =>
+      child.hasAttribute("selected"),
+    );
 
     if (selectedChildren) {
       this.centerElement(selectedChildren);
@@ -182,15 +184,17 @@ export class AuroCarousel extends LitElement {
    * @returns {boolean} True if the screen is small.
    */
   isSmallScreen() {
-    const breakpointDetector = this.renderRoot.querySelector('.breakpointDetector');
+    const breakpointDetector = this.renderRoot.querySelector(
+      ".breakpointDetector",
+    );
     // CSS sets content of pseudoelement based on media query
     // This prevents duplicating the breakpoints in CSS and JS
-    const currentBreakpoint = window.
-      getComputedStyle(breakpointDetector, ':before').
-      getPropertyValue('content').
-      replace(/"/gu, '');
+    const currentBreakpoint = window
+      .getComputedStyle(breakpointDetector, ":before")
+      .getPropertyValue("content")
+      .replace(/"/gu, "");
 
-    return currentBreakpoint !== 'sm';
+    return currentBreakpoint !== "sm";
   }
 
   /**
@@ -210,10 +214,11 @@ export class AuroCarousel extends LitElement {
    */
   centerElement(el) {
     if (!this.contains(el)) {
-      throw new Error('Element is not a descendant of this carousel');
+      throw new Error("Element is not a descendant of this carousel");
     }
 
-    const middleX = el.getBoundingClientRect().x - this.getBoundingClientRect().left;
+    const middleX =
+      el.getBoundingClientRect().x - this.getBoundingClientRect().left;
     const carouselMiddle = this.offsetWidth / 2; // eslint-disable-line no-magic-numbers
     const elCenter = el.offsetWidth / 2; // eslint-disable-line no-magic-numbers
     const scrollTotal = middleX - carouselMiddle + elCenter;
@@ -257,23 +262,23 @@ export class AuroCarousel extends LitElement {
   setUpIntersectionObserver() {
     const options = {
       root: this.carousel,
-      threshold: 0.8
+      threshold: 0.8,
     };
 
     // We only manage tabIndex/aria-hidden in browsers that support IntersectionObserver (excludes IE)
     // and medium or larger screen sizes. The left/right buttons do not show on small screens so there
     // is not a way for screen reader users to scroll the carousel.
-    if ('IntersectionObserver' in window && !this.isSmallScreen()) {
+    if ("IntersectionObserver" in window && !this.isSmallScreen()) {
       const callback = (entries) => {
         // when the slotted element becomes visible, we want it to be tabbable and visible to assistive tech
         // otherwise, we remove it from the tab order and set aria-hidden
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.removeAttribute('tabindex');
-            entry.target.removeAttribute('aria-hidden');
+            entry.target.removeAttribute("tabindex");
+            entry.target.removeAttribute("aria-hidden");
           } else {
-            entry.target.setAttribute('tabindex', '-1');
-            entry.target.setAttribute('aria-hidden', true);
+            entry.target.setAttribute("tabindex", "-1");
+            entry.target.setAttribute("aria-hidden", true);
           }
         });
       };
@@ -290,7 +295,7 @@ export class AuroCarousel extends LitElement {
    * @return {void}
    */
   setUpResizeObserver() {
-    if ('ResizeObserver' in window) {
+    if ("ResizeObserver" in window) {
       // Update scrollflags when a child's size changes (e.g., a custom element becomes
       // defined or an image is loaded)
       this.resizeObserver = new ResizeObserver(() => this.setScrollFlags());
@@ -336,13 +341,13 @@ export class AuroCarousel extends LitElement {
 
     if (scrollRight) {
       this.scrollCarousel(this.scrollDistance);
-      click = new CustomEvent('scrollRight', {
+      click = new CustomEvent("scrollRight", {
         bubbles: true,
         composed: true,
       });
     } else {
       this.scrollCarousel(-1 * this.scrollDistance); // eslint-disable-line no-magic-numbers
-      click = new CustomEvent('scrollLeft', {
+      click = new CustomEvent("scrollLeft", {
         bubbles: true,
         composed: true,
       });
@@ -352,10 +357,10 @@ export class AuroCarousel extends LitElement {
 
   render() {
     const carouselClassMap = {
-      "wrapper": true,
-      "carousel": true,
+      wrapper: true,
+      carousel: true,
       "carousel--scrolledToStart": this.scrolledToStart && !this.displayArrows,
-      "carousel--scrolledToEnd": this.scrolledToEnd && !this.displayArrows
+      "carousel--scrolledToEnd": this.scrolledToEnd && !this.displayArrows,
     };
 
     return html`
