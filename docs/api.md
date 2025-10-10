@@ -8,7 +8,7 @@ The auro-carousel component displays a group of elements in a scrollable contain
 |------------------|------------------|-----------|---------|--------------------------------------------------|
 | `centerSelected` | `centerSelected` | `String`  |         | Apply to outer auro-carousel element to automatically center the selected node on UI render. |
 | `displayArrows`  | `displayArrows`  | `Boolean` |         | Forces left and right navigation to stick in DOM regardless of content width |
-| `label`          | `label`          | `String`  |         | The accessible name for the carousel. Logs a console warning if not set. |
+| `label`          | `label`          | `String`  |         | DEPRECATED - Use `ariaLabel` slot instead.       |
 | `scrollDistance` | `scrollDistance` | `Number`  | 300     | How many pixels to scroll the carousel when the shoulder buttons are triggered. |
 
 ## Methods
@@ -29,9 +29,12 @@ The auro-carousel component displays a group of elements in a scrollable contain
 
 ## Slots
 
-| Name | Description                  |
-|------|------------------------------|
-|      | the elements in the carousel |
+| Name                     | Description                                      |
+|--------------------------|--------------------------------------------------|
+|                          | the elements in the carousel                     |
+| `ariaLabel`              | Text to give an accessible name to the carousel. |
+| `ariaLabel.scroll.left`  | Text to give an accessible name to the left scroll button. |
+| `ariaLabel.scroll.right` | Text to give an accessible name to the right scroll button. |
 
 ## CSS Shadow Parts
 

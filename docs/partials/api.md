@@ -52,22 +52,6 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 
 </auro-accordion>
 
-#### `label`
-
-The accessible name for the carousel. Logs a console warning if not set.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/label.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/label.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
 #### `scrollDistance`
 
 How many pixels to scroll the carousel when the shoulder buttons are triggered.
@@ -132,10 +116,30 @@ Used for all elements inside the scrolling carousel.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
+
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+</auro-accordion>
+
+#### aria label slots
+
+Use the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots to customize the accessible names for the carousel container and the left and right scroll buttons.
+
+**Note:** Do not use the `aria-label` attribute on the `auro-carousel` element itself. This will be ignored in favor of the `ariaLabel` slot.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/ariaLabelSlots.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/ariaLabelSlots.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
