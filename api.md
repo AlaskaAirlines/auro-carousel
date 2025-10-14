@@ -11,7 +11,7 @@ The auro-carousel component displays a group of elements in a scrollable contain
 |------------------|------------------|-----------|---------|--------------------------------------------------|
 | [centerSelected](#centerSelected) | `centerSelected` | `String`  |         | Apply to outer auro-carousel element to automatically center the selected node on UI render. |
 | [displayArrows](#displayArrows)  | `displayArrows`  | `Boolean` |         | Forces left and right navigation to stick in DOM regardless of content width |
-| [label](#label)          | `label`          | `String`  |         | The accessible name for the carousel. Logs a console warning if not set. |
+| [label](#label)          | `label`          | `String`  |         | DEPRECATED - Use `ariaLabel` slot instead.       |
 | [scrollDistance](#scrollDistance) | `scrollDistance` | `Number`  | 300     | How many pixels to scroll the carousel when the shoulder buttons are triggered. |
 
 ## Methods
@@ -32,9 +32,12 @@ The auro-carousel component displays a group of elements in a scrollable contain
 
 ## Slots
 
-| Name | Description                  |
-|------|------------------------------|
-|      | the elements in the carousel |
+| Name                     | Description                                      |
+|--------------------------|--------------------------------------------------|
+|                          | the elements in the carousel                     |
+| [ariaLabel](#ariaLabel)              | Text to give an accessible name to the carousel. |
+| `ariaLabel.scroll.left`  | Text to give an accessible name to the left scroll button. |
+| `ariaLabel.scroll.right` | Text to give an accessible name to the right scroll button. |
 
 ## CSS Shadow Parts
 
@@ -219,56 +222,6 @@ Using the `displayArrows` attribute will persistently show the left and right ar
   <auro-pane date="2021-10-26"></auro-pane>
   <auro-pane date="2021-10-27"></auro-pane>
   <auro-pane date="2021-10-28"></auro-pane>
-</auro-carousel>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-#### <a name="label"></a>`label`<a href="#" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-The accessible name for the carousel. Logs a console warning if not set.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/label.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/label.html -->
-  <auro-carousel label="Flight options">
-    <auro-pane date="2020-10-10" price="$435"></auro-pane>
-    <auro-pane date="2020-10-11" price="$435"></auro-pane>
-    <auro-pane date="2020-10-12" price="$435"></auro-pane>
-    <auro-pane date="2020-10-13" selected price="$435"></auro-pane>
-    <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
-    <auro-pane date="2020-10-15" price="$435"></auro-pane>
-    <auro-pane date="2020-10-16" price="$435"></auro-pane>
-    <auro-pane date="2020-10-17" price="$435"></auro-pane>
-    <auro-pane date="2020-10-18" price="$435"></auro-pane>
-    <auro-pane date="2020-10-19" price="$435"></auro-pane>
-    <auro-pane date="2020-10-16" price="$435"></auro-pane>
-    <auro-pane date="2020-10-17" price="$435"></auro-pane>
-    <auro-pane date="2020-10-18" price="$435"></auro-pane>
-    <auro-pane date="2020-10-19" price="$435"></auro-pane>
-  </auro-carousel>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/label.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/label.html -->
-
-```html
-<auro-carousel label="Flight options">
-  <auro-pane date="2020-10-10" price="$435"></auro-pane>
-  <auro-pane date="2020-10-11" price="$435"></auro-pane>
-  <auro-pane date="2020-10-12" price="$435"></auro-pane>
-  <auro-pane date="2020-10-13" selected price="$435"></auro-pane>
-  <auro-pane date="2020-10-14" price="$435" disabled></auro-pane>
-  <auro-pane date="2020-10-15" price="$435"></auro-pane>
-  <auro-pane date="2020-10-16" price="$435"></auro-pane>
-  <auro-pane date="2020-10-17" price="$435"></auro-pane>
-  <auro-pane date="2020-10-18" price="$435"></auro-pane>
-  <auro-pane date="2020-10-19" price="$435"></auro-pane>
-  <auro-pane date="2020-10-16" price="$435"></auro-pane>
-  <auro-pane date="2020-10-17" price="$435"></auro-pane>
-  <auro-pane date="2020-10-18" price="$435"></auro-pane>
-  <auro-pane date="2020-10-19" price="$435"></auro-pane>
 </auro-carousel>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -504,6 +457,73 @@ Used for all elements inside the scrolling carousel.
   <auro-pane date="2020-10-17" price="$435"></auro-pane>
   <auro-pane date="2020-10-18" price="$435"></auro-pane>
   <auro-pane date="2020-10-19" price="$435"></auro-pane>
+</auro-carousel>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+#### aria label slots
+
+Use the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots to customize the accessible names for the carousel container and the left and right scroll buttons.
+
+**Note:** Do not use the `aria-label` attribute on the `auro-carousel` element itself. This will be ignored in favor of the `ariaLabel` slot.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/ariaLabelSlots.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/ariaLabelSlots.html -->
+  <auro-carousel centerSelected>
+    <span slot="ariaLabel">My Carousel</span>
+    <span slot="ariaLabel.scroll.left">My custom scroll left text</span>
+    <span slot="ariaLabel.scroll.right">My custom scroll right text</span>
+    <auro-pane date="2020-10-10" price="$435"></auro-pane>
+    <auro-pane date="2020-10-11" price="$435"></auro-pane>
+    <auro-pane date="2020-10-12" price="$435"></auro-pane>
+    <auro-pane date="2020-10-13" price="$435"></auro-pane>
+    <auro-pane date="2020-10-14" price="$435"></auro-pane>
+    <auro-pane date="2020-10-15" price="$435"></auro-pane>
+    <auro-pane date="2020-10-16" price="$435"></auro-pane>
+    <auro-pane date="2020-10-17" price="$435"></auro-pane>
+    <auro-pane date="2020-10-18" selected price="$435"></auro-pane>
+    <auro-pane date="2020-10-19" price="$435"></auro-pane>
+    <auro-pane date="2020-10-20" price="$435"></auro-pane>
+    <auro-pane date="2020-10-21" price="$435"></auro-pane>
+    <auro-pane date="2020-10-22" price="$435"></auro-pane>
+    <auro-pane date="2020-10-23" price="$435"></auro-pane>
+    <auro-pane date="2020-10-24" price="$435"></auro-pane>
+    <auro-pane date="2020-10-25" price="$435"></auro-pane>
+    <auro-pane date="2020-10-26" price="$435"></auro-pane>
+    <auro-pane date="2020-10-27" price="$435"></auro-pane>
+  </auro-carousel>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/ariaLabelSlots.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/ariaLabelSlots.html -->
+
+```html
+<auro-carousel centerSelected>
+  <span slot="ariaLabel">My Carousel</span>
+  <span slot="ariaLabel.scroll.left">My custom scroll left text</span>
+  <span slot="ariaLabel.scroll.right">My custom scroll right text</span>
+  <auro-pane date="2020-10-10" price="$435"></auro-pane>
+  <auro-pane date="2020-10-11" price="$435"></auro-pane>
+  <auro-pane date="2020-10-12" price="$435"></auro-pane>
+  <auro-pane date="2020-10-13" price="$435"></auro-pane>
+  <auro-pane date="2020-10-14" price="$435"></auro-pane>
+  <auro-pane date="2020-10-15" price="$435"></auro-pane>
+  <auro-pane date="2020-10-16" price="$435"></auro-pane>
+  <auro-pane date="2020-10-17" price="$435"></auro-pane>
+  <auro-pane date="2020-10-18" selected price="$435"></auro-pane>
+  <auro-pane date="2020-10-19" price="$435"></auro-pane>
+  <auro-pane date="2020-10-20" price="$435"></auro-pane>
+  <auro-pane date="2020-10-21" price="$435"></auro-pane>
+  <auro-pane date="2020-10-22" price="$435"></auro-pane>
+  <auro-pane date="2020-10-23" price="$435"></auro-pane>
+  <auro-pane date="2020-10-24" price="$435"></auro-pane>
+  <auro-pane date="2020-10-25" price="$435"></auro-pane>
+  <auro-pane date="2020-10-26" price="$435"></auro-pane>
+  <auro-pane date="2020-10-27" price="$435"></auro-pane>
 </auro-carousel>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
