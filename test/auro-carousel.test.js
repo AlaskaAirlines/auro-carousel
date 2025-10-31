@@ -23,7 +23,7 @@ describe("auro-carousel", () => {
 
   it("sets label on the carousel", async () => {
     const el = await getDefaultFixture();
-    expect(el.carousel.getAttribute("aria-label")).to.equal("buttons");
+    expect(el.carousel.getAttribute("aria-label")).to.equal("Custom Label");
   });
 
   it("sticks the navigation arrows properly", async () => {
@@ -151,13 +151,15 @@ describe("auro-carousel", () => {
   });
 
   async function getCenterSelectedFixture() {
+    // Aria Label slot moved to middle due to failing tests from render timing issues
     return fixture(html`
-      <auro-carousel label="buttons" centerSelected>
+      <auro-carousel centerSelected>
         <button style="width: 200px">Button 1</button>
         <button style="width: 200px">Button 2</button>
         <button style="width: 200px">Button 3</button>
         <button style="width: 200px">Button 4</button>
         <button style="width: 200px">Button 5</button>
+        <span slot="ariaLabel">Custom Label</span>
         <button style="width: 200px" selected>Button 6</button>
         <button style="width: 200px">Button 7</button>
         <button style="width: 200px">Button 8</button>
@@ -168,14 +170,16 @@ describe("auro-carousel", () => {
   }
 
   async function getDefaultFixture(scrollDistance, noLabel = false) {
-    // set width on component to force it to overflow
+    // Set width on component to force it to overflow
+    // Aria Label slot moved to middle due to failing tests from render timing issues
     const el = await fixture(html`
-      <auro-carousel label=${noLabel ? "" : "buttons"} scrollDistance=${ifDefined(scrollDistance)} style="width: 200px;">
+      <auro-carousel scrollDistance=${ifDefined(scrollDistance)} style="width: 200px;">
         <button>Button 1</button>
         <button>Button 2</button>
         <button>Button 3</button>
         <button>Button 4</button>
         <button>Button 5</button>
+        <span slot="ariaLabel">Custom Label</span>
         <button>Button 6</button>
         <button>Button 7</button>
         <button>Button 8</button>

@@ -31,10 +31,13 @@ import tokensCss from "./styles/tokens.scss";
  *
  * @attr {Boolean} displayArrows - Forces left and right navigation to stick in DOM regardless of content width
  * @attr {Number} scrollDistance - How many pixels to scroll the carousel when the shoulder buttons are triggered.
- * @attr {String} label - The accessible name for the carousel. Logs a console warning if not set.
+ * @attr {String} label - DEPRECATED - Use `ariaLabel` slot instead.
  * @attr {String} centerSelected - Apply to outer auro-carousel element to automatically center the selected node on UI render.
  *
  * @slot - the elements in the carousel
+ * @slot ariaLabel - Text to give an accessible name to the carousel.
+ * @slot ariaLabel.scroll.left - Text to give an accessible name to the left scroll button.
+ * @slot ariaLabel.scroll.right - Text to give an accessible name to the right scroll button.
  *
  * @csspart wrapper - The primary root HTML element of the component.
  *
@@ -364,9 +367,14 @@ export class AuroCarousel extends LitElement {
     };
 
     return html`
+      <!-- Hidden slots for aria labels -->
+      <slot name="ariaLabel" hidden @slotchange="${this.requestUpdate}"></slot>
+      <slot name="ariaLabel.scroll.left" hidden @slotchange="${this.requestUpdate}"></slot>
+      <slot name="ariaLabel.scroll.right" hidden @slotchange="${this.requestUpdate}"></slot>
+
       <div class="breakpointDetector"></div>
       <div role="group"
-        aria-label="${ifDefined(this.label)}"
+        aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel') || this.label)}"
         aria-roledescription="carousel"
         class="${classMap(carouselClassMap)}"
         part="wrapper"
@@ -374,7 +382,7 @@ export class AuroCarousel extends LitElement {
         
         <!-- Left button -->
         <${this.buttonTag} 
-          aria-label="Scroll Left"
+          aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel.scroll.left') || 'Scroll Left')}"
           shape="circle"
           variant="secondary" 
           @click=${() => this.handleClick(false)} 
@@ -390,7 +398,7 @@ export class AuroCarousel extends LitElement {
         
         <!-- Right button -->
         <${this.buttonTag} 
-          aria-label="Scroll Right"
+          aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel.scroll.right') || 'Scroll Right')}"
           shape="circle"
           variant="secondary" 
           @click=${() => this.handleClick(true)} 
