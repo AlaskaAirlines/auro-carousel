@@ -27,27 +27,28 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-carousel component displays a group of elements in a scrollable container.
+ * The `auro-carousel` element displays a group of elements in a scrollable container.
+ * @customElement auro-carousel
  *
- * @attr {Boolean} displayArrows - Forces left and right navigation to stick in DOM regardless of content width
- * @attr {Number} scrollDistance - How many pixels to scroll the carousel when the shoulder buttons are triggered.
- * @attr {String} label - DEPRECATED - Use `ariaLabel` slot instead.
- * @attr {String} centerSelected - Apply to outer auro-carousel element to automatically center the selected node on UI render.
- *
- * @slot - the elements in the carousel
- * @slot ariaLabel - Text to give an accessible name to the carousel.
- * @slot ariaLabel.scroll.left - Text to give an accessible name to the left scroll button.
- * @slot ariaLabel.scroll.right - Text to give an accessible name to the right scroll button.
+ * @slot - Default slot for the elements in the carousel
+ * @slot ariaLabel - Text to give an accessible name to the carousel
+ * @slot ariaLabel.scroll.left - Text to give an accessible name to the left scroll button
+ * @slot ariaLabel.scroll.right - Text to give an accessible name to the right scroll button
  *
  * @csspart wrapper - The primary root HTML element of the component.
  *
- * @event scrollRight - when the guest clicks the 'right' carousel button
- * @event scrollLeft - when the guest clicks the 'left' carousel button
+ * @event scrollRight - Dispatched when the guest clicks the 'right' carousel button
+ * @event scrollLeft - Dispatched when the guest clicks the 'left' carousel button
  */
 
 export class AuroCarousel extends LitElement {
   constructor() {
     super();
+
+    this._initializeDefaults();
+  }
+
+  _initializeDefaults() {
     this.scrollDistance = 300;
 
     /**
@@ -86,16 +87,32 @@ export class AuroCarousel extends LitElement {
 
   static get properties() {
     return {
-      displayArrows: { type: Boolean },
-      scrollDistance: {
-        type: Number,
-        reflect: true,
-      },
-      label: { type: String },
+      /**
+       * Automatically centers the selected node on UI render
+       */
       centerSelected: {
         type: String,
         reflect: true,
       },
+
+      /**
+       * Always displays the left and right arrows, regardless of content width
+       */
+      displayArrows: { type: Boolean },
+
+      /**
+       * DEPRECATED - Use `ariaLabel` slot instead.
+       */
+      label: { type: String },
+
+      /**
+       * The number of pixels to scroll the carousel when the left or right buttons are interacted with
+       * @default 300
+       */
+      scrollDistance: {
+        type: Number,
+        reflect: true
+      }
     };
   }
 
@@ -105,7 +122,7 @@ export class AuroCarousel extends LitElement {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-carousel"] - The name of element that you want to register to.
+   * @param {string} [name="auro-carousel"] - The name of the element that you want to register.
    *
    * @example
    * AuroCarousel.register("custom-carousel") // this will register this element to <custom-carousel/>
@@ -149,6 +166,7 @@ export class AuroCarousel extends LitElement {
 
   /**
    * Function handler for anything that happens when all its children is ready.
+   * @private
    * @return {void}
    */
   actionOnChildrenReady() {
