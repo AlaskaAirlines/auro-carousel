@@ -13,12 +13,12 @@ The `auro-carousel` element displays a group of elements in a scrollable contain
 
 ### Methods
 
-| Name             | Parameters                                                                                                                       | Return          | Description                                                         |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------------------------------------------------------------- |
-| centerElement    | `el` (Element) - The element to center inside the carousel. Must be a descendant of the carousel.                                | [object Object] | Centers the given element inside the carousel.                      |
-| register         | `name` (string) - The name of the element that you want to register.                                                             |                 | This will register this element with the browser.                   |
-| scrollCarousel   | `num` (number) - The number of pixels to scroll the carousel by. Positive scrolls to the<br>right, negative scrolls to the left. | [object Object] | Scrolls the carousel by the given amount.                           |
-| scrollToSelected | None                                                                                                                             | [object Object] | Scroll to the first child component that have 'selected' attribute. |
+| Name             | Parameters                                                                                                                       | Return | Description                                                         |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------- |
+| centerElement    | `el` (Element) - The element to center inside the carousel. Must be a descendant of the carousel.                                | void   | Centers the given element inside the carousel.                      |
+| register         | `name` (string) - The name of the element that you want to register.                                                             | void   | This will register this element with the browser.                   |
+| scrollCarousel   | `num` (number) - The number of pixels to scroll the carousel by. Positive scrolls to the<br>right, negative scrolls to the left. | void   | Scrolls the carousel by the given amount.                           |
+| scrollToSelected | None                                                                                                                             | void   | Scroll to the first child component that have 'selected' attribute. |
 
 ### Events
 

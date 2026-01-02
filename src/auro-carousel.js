@@ -126,7 +126,7 @@ export class AuroCarousel extends LitElement {
    *
    * @example
    * AuroCarousel.register("custom-carousel") // this will register this element to <custom-carousel/>
-   *
+   * @returns {void}
    */
   static register(name = "auro-carousel") {
     AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroCarousel);
