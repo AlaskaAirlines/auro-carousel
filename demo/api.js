@@ -1,4 +1,4 @@
-import { centerElementExample } from "../apiExamples/centerElement";
+import { centerElementExample } from "../apiExamples/center-element";
 import "../src/registered";
 
 export function initExamples(initCount) {
