@@ -27,18 +27,40 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The `auro-carousel` element displays a group of elements in a scrollable container.
+ * Displays a group of elements, such as flight date options or images, in a horizontally scrollable container with buttons to scroll left and right.
+ *
+ * **Key capabilities:**
+ * - **Scroll buttons**: Shows left and right buttons on medium and larger screens when there's more content to scroll to. Add `displayArrows` to always show them.
+ * - **Centered selection**: Scrolls the first element with the `selected` attribute to the center when you add `centerSelected`.
+ * - **Custom scroll distance**: Sets how far each button press scrolls, in pixels, with `scrollDistance`.
+ * - **Accessible names**: Names the carousel and its scroll buttons through the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots.
+ *
+ * @example
+ * ```html
+ * <auro-carousel>
+ *   <span slot="ariaLabel">Flight date options</span>
+ *   <auro-pane date="2020-10-10" price="$435"></auro-pane>
+ *   <auro-pane date="2020-10-11" price="$435"></auro-pane>
+ * </auro-carousel>
+ * ```
+ *
+ * @summary A horizontally scrollable container with left and right scroll buttons and optional centering of a selected element.
  * @customElement auro-carousel
  *
- * @slot - Default slot for the elements in the carousel
- * @slot ariaLabel - Text to give an accessible name to the carousel
- * @slot ariaLabel.scroll.left - Text to give an accessible name to the left scroll button
- * @slot ariaLabel.scroll.right - Text to give an accessible name to the right scroll button
+ * @attr {boolean} centerselected - Centers the carousel on the first element that has the `selected` attribute when the carousel first renders.
  *
- * @csspart wrapper - The primary root HTML element of the component.
+ * @slot - The elements to scroll through, such as `auro-pane` elements or images.
+ * @slot ariaLabel - Text that screen readers announce as the carousel's name, for example "Flight date options". Takes priority over the `label` attribute.
+ * @slot ariaLabel.scroll.left - Text that screen readers announce for the left scroll button, for example "Show earlier dates". Defaults to "Scroll Left".
+ * @slot ariaLabel.scroll.right - Text that screen readers announce for the right scroll button, for example "Show later dates". Defaults to "Scroll Right".
  *
- * @event scrollRight - Dispatched when the guest clicks the 'right' carousel button
- * @event scrollLeft - Dispatched when the guest clicks the 'left' carousel button
+ * @csspart wrapper - The scrollable `<div>` that wraps the scroll buttons and the slotted elements.
+ *
+ * @cssprop --ds-auro-carousel-gradient-color-one - Color at the outer edge of the fade shown beside each scroll button.
+ * @cssprop --ds-auro-carousel-gradient-color-two - Color at the inner edge of the fade shown beside each scroll button.
+ *
+ * @event scrollRight - Dispatched when someone selects the right scroll button.
+ * @event scrollLeft - Dispatched when someone selects the left scroll button.
  */
 
 export class AuroCarousel extends LitElement {
@@ -73,13 +95,13 @@ export class AuroCarousel extends LitElement {
     this.iconTag = versioning.generateTag("auro-icon", iconVersion, AuroIcon);
 
     /**
-     * Whether or not the carousel is scrolled to the start.
+     * Whether the carousel is scrolled to the start.
      * @private
      */
     this.scrolledToStart = false;
 
     /**
-     * Whether or not the carousel is scrolled to the end.
+     * Whether the carousel is scrolled to the end.
      * @private
      */
     this.scrolledToEnd = false;
@@ -88,30 +110,25 @@ export class AuroCarousel extends LitElement {
   static get properties() {
     return {
       /**
-       * Automatically centers the selected node on UI render
+       * Shows the left and right scroll buttons at all times, instead of only when there's more content to scroll to in that direction. The buttons stay hidden on small screens.
        */
-      centerSelected: {
-        type: String,
-        reflect: true,
-      },
+      displayArrows: { type: Boolean, attribute: "displayarrows" },
 
       /**
-       * Always displays the left and right arrows, regardless of content width
-       */
-      displayArrows: { type: Boolean },
-
-      /**
-       * DEPRECATED - Use `ariaLabel` slot instead.
+       * Deprecated: Use the `ariaLabel` slot instead.
+       * Sets the text that screen readers announce as the carousel's name.
+       * @deprecated Use the `ariaLabel` slot instead.
        */
       label: { type: String },
 
       /**
-       * The number of pixels to scroll the carousel when the left or right buttons are interacted with
+       * Sets how many pixels the carousel scrolls when someone selects the left or right button.
        * @default 300
        */
       scrollDistance: {
         type: Number,
-        reflect: true
+        reflect: true,
+        attribute: "scrolldistance"
       }
     };
   }
@@ -121,11 +138,11 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * This will register this element with the browser.
-   * @param {string} [name="auro-carousel"] - The name of the element that you want to register.
+   * Registers the element with the browser under a tag name.
+   * @param {string} [name="auro-carousel"] - The tag name to register the element under.
    *
    * @example
-   * AuroCarousel.register("custom-carousel") // this will register this element to <custom-carousel/>
+   * AuroCarousel.register("custom-carousel") // Registers the element as <custom-carousel>
    * @returns {void}
    */
   static register(name = "auro-carousel") {
@@ -138,10 +155,10 @@ export class AuroCarousel extends LitElement {
 
     this.carousel = this.renderRoot.querySelector(".carousel");
 
-    if (!this.label) {
+    if (!this.label && !this.runtimeUtils.getSlotText(this, "ariaLabel")) {
       // eslint-disable-next-line no-console
       console.warn(
-        "Label should be provided to auro-carousel for carousel to be accessible",
+        "A label or an ariaLabel slot should be provided to auro-carousel for the carousel to be accessible",
       );
     }
 
@@ -165,7 +182,7 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Function handler for anything that happens when all its children is ready.
+   * Waits for the slotted elements to finish updating, then scrolls to the selected one.
    * @private
    * @return {void}
    */
@@ -186,7 +203,7 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Scroll to the first child component that have 'selected' attribute.
+   * Scrolls the first element that has the `selected` attribute to the center of the carousel.
    * @return {void}
    */
   scrollToSelected() {
@@ -200,9 +217,9 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to determine if the screen is small.
+   * Checks whether the screen is narrower than the `sm` breakpoint.
    * @private
-   * @returns {boolean} True if the screen is small.
+   * @returns {boolean} True if the screen is small; false otherwise.
    */
   isSmallScreen() {
     const breakpointDetector = this.renderRoot.querySelector(
@@ -231,6 +248,7 @@ export class AuroCarousel extends LitElement {
   /**
    * Centers the given element inside the carousel.
    * @param {Element} el - The element to center inside the carousel. Must be a descendant of the carousel.
+   * @throws {Error} If the element isn't a descendant of the carousel.
    * @return {void}
    */
   centerElement(el) {
@@ -248,10 +266,10 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to set scrolledToStart and scrolledToEnd.
+   * Sets whether the carousel is scrolled to the start or to the end.
    * @private
-   * @param {boolean} autofocus - True if the first or last element should be focused when scrolled to
-   * start or end, respectively.
+   * @param {boolean} autofocus - If true, focuses the first element when the carousel is scrolled to the
+   * start, or the last element when it's scrolled to the end. If false, doesn't change focus.
    * @return {void}
    */
   setScrollFlags(autofocus) {
@@ -274,9 +292,9 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to set up the intersection observer. When carousel elements are out of view,
-   * we remove it from the tab order and hide it from assistive tech. When they come into view, we
-   * reverse our changes.
+   * Sets up the intersection observer. Elements scrolled out of view are removed from the tab order
+   * and hidden from screen readers, and elements scrolled into view are restored. On small screens,
+   * the observer isn't set up.
    * @private
    * @return {void}
    */
@@ -310,8 +328,8 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to set up the resize observer. When an element is resized, we update
-   * the scroll flags so the buttons are shown/hidden appropriately.
+   * Sets up the resize observer. When a slotted element is resized, updates the scroll flags
+   * so the buttons show or hide as needed.
    * @private
    * @return {void}
    */
@@ -327,7 +345,7 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to observe the components children with IntersectionObserver.
+   * Starts observing each slotted element with the intersection observer.
    * @private
    * @return {void}
    */
@@ -338,7 +356,7 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to handle slot change. When the slot contents change, we need to re-observe the
+   * Called when the slotted content changes. Updates the scroll flags and restarts observing the
    * slotted elements.
    * @private
    * @return {void}
@@ -352,9 +370,9 @@ export class AuroCarousel extends LitElement {
   }
 
   /**
-   * Internal method to handle clicks on the shoulder buttons.
+   * Scrolls the carousel by `scrollDistance` and dispatches a `scrollRight` or `scrollLeft` event.
    * @private
-   * @param {boolean} scrollRight - Whether to scroll the carousel right or left.
+   * @param {boolean} scrollRight - If true, scrolls the carousel right. If false, scrolls it left.
    * @return {void}
    */
   handleClick(scrollRight) {
