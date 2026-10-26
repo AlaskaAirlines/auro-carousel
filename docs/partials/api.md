@@ -18,9 +18,9 @@
 
 ## Property & Attribute Examples
 
-#### Center Selected
+#### Center selected
 
-Set the `centerSelected` attribute to automatically center the selected node upon rendering the UI.
+Add the `centerSelected` attribute to scroll the first element with the `selected` attribute to the center when the carousel first renders.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/center-selected.html) -->
@@ -35,9 +35,9 @@ Set the `centerSelected` attribute to automatically center the selected node upo
 
 </auro-accordion>
 
-#### Display Arrows
+#### Display arrows
 
-Using the `displayArrows` attribute will persistently show the left and right arrow buttons without consideration of scroll position.
+Add the `displayArrows` attribute to always show the left and right scroll buttons, whatever the scroll position. The buttons stay hidden on small screens.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/display-arrows.html) -->
@@ -52,9 +52,9 @@ Using the `displayArrows` attribute will persistently show the left and right ar
 
 </auro-accordion>
 
-#### Scroll Distance
+#### Scroll distance
 
-Use the `scrollDistance` attribute to specify how many pixels to scroll the carousel when the shoulder buttons are interacted with.
+Use the `scrollDistance` attribute to set how many pixels the carousel scrolls when someone selects the left or right button.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/scroll-distance.html) -->
@@ -71,11 +71,11 @@ Use the `scrollDistance` attribute to specify how many pixels to scroll the caro
 
 ## Method Examples
 
-#### Center Element
+#### Center element
 
-The following example illustrates the use of the `centerElement` method. This feature will center the selected pane element when clicked if there are enough surrounding nodes. This example **DOES NOT** center on load, as shown by the `centerSelected` attribute.
+Use the `centerElement` method to center an element inside the carousel, such as a pane when someone selects it. The element must be a descendant of the carousel, or the method throws an error. The carousel can only center the element when there's enough content on both sides of it.
 
-This method requires the user to invoke this feature based on a click event. See both a vanilla JS and React example below.
+This example doesn't use `centerSelected`, so it doesn't center the selected pane on load. The method doesn't run on its own, so call it from an event handler, such as a click listener. The code below shows a vanilla JS example and a React example.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/center-element.html) -->
@@ -98,11 +98,11 @@ This method requires the user to invoke this feature based on a click event. See
 
 ## Slot Examples
 
-### Aria Label Slots
+### Aria label slots
 
-Use the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots to customize the accessible names for the carousel container and the left and right scroll buttons.
+Use the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots to customize the accessible names for the carousel and its left and right scroll buttons.
 
-**Note:** Do not use the `aria-label` attribute on the `auro-carousel` element itself. This will be ignored in favor of the `ariaLabel` slot.
+**Note:** Don't add the `aria-label` attribute to the `auro-carousel` element itself. The carousel takes its accessible name from the `ariaLabel` slot, not from that attribute.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/aria-label-slots.html) -->
@@ -117,9 +117,9 @@ Use the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots
 
 </auro-accordion>
 
-## Restyle Component with CSS Variables
+## Restyle with CSS custom properties
 
-The component may be restyled by changing the values of the following token(s).
+Change the values of the following CSS custom properties to restyle the component.
 
 <!-- Remove section if component does not have any component specific tokens -->
 

@@ -6,4 +6,4 @@ import { AuroCarousel } from '@aurodesignsystem/auro-carousel/class';
 AuroCarousel.register('custom-carousel');
 ```
 
-This will create a new custom element `<custom-carousel>` that behaves exactly like `<auro-carousel>`, allowing both to coexist on the same page without interfering with each other.
+This creates a new custom element `<custom-carousel>` that behaves like `<auro-carousel>`, so both can be on the same page without interfering with each other.
