@@ -1,0 +1,64 @@
+{
+  "tag": "auro-carousel",
+  "className": "AuroCarousel",
+  "attributes": [
+    {
+      "name": "centerselected",
+      "kind": "boolean",
+      "values": null,
+      "default": null,
+      "description": "Centers the carousel on the first element that has the `selected` attribute when the carousel first renders.",
+      "deprecated": false,
+      "privacy": "public",
+      "inheritedFrom": null
+    },
+    {
+      "name": "displayarrows",
+      "kind": "boolean",
+      "values": null,
+      "default": null,
+      "description": "Shows the left and right scroll buttons at all times, instead of only when there's more content to scroll to in that direction. The buttons stay hidden on small screens.",
+      "deprecated": false,
+      "privacy": "public",
+      "inheritedFrom": null
+    },
+    {
+      "name": "scrolldistance",
+      "kind": "number",
+      "values": null,
+      "default": "300",
+      "description": "Sets how many pixels the carousel scrolls when someone selects the left or right button.",
+      "deprecated": false,
+      "privacy": "public",
+      "inheritedFrom": null
+    },
+    {
+      "name": "label",
+      "kind": "string",
+      "values": null,
+      "default": null,
+      "description": "Deprecated: Use the `ariaLabel` slot instead. Sets the text that screen readers announce as the carousel's name.",
+      "deprecated": "Use the `ariaLabel` slot instead.",
+      "privacy": "public",
+      "inheritedFrom": null
+    }
+  ],
+  "slots": [
+    {
+      "name": "(default)",
+      "description": "The elements to scroll through, such as `auro-pane` elements or images."
+    },
+    {
+      "name": "ariaLabel",
+      "description": "Text that screen readers announce as the carousel's name, for example \"Flight date options\". Takes priority over the `label` attribute."
+    },
+    {
+      "name": "ariaLabel.scroll.left",
+      "description": "Text that screen readers announce for the left scroll button, for example \"Show earlier dates\". Defaults to \"Scroll Left\"."
+    },
+    {
+      "name": "ariaLabel.scroll.right",
+      "description": "Text that screen readers announce for the right scroll button, for example \"Show later dates\". Defaults to \"Scroll Right\"."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Auro toolkit - Fork - Code Connect Test",
+  "lastModified": "2026-11-02T17:50:15Z",
+  "version": "2417330611763408085",
+  "nodes": {
+    "3693:13840": {
+      "document": {
+        "id": "3693:13840",
+        "name": "Carousel",
+        "type": "COMPONENT_SET",
+        "componentPropertyDefinitions": {
+          "Gradient Background#3694:0": {
+            "type": "BOOLEAN",
+            "defaultValue": true
+          },
+          "State": {
+            "type": "VARIANT",
+            "defaultValue": "Default",
+            "variantOptions": [
+              "Default",
+              "Hover",
+              "Focused",
+              "Active"
+            ]
+          },
+          "Direction": {
+            "type": "VARIANT",
+            "defaultValue": "False",
+            "variantOptions": [
+              "False",
+              "True"
+            ]
+          }
+        },
+        "instanceLayers": [
+          "Chevron"
+        ]
+      }
+    }
+  }
+}
