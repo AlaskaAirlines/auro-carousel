@@ -11,7 +11,7 @@ Displays a group of elements, such as flight date options or images, in a horizo
 - **Custom scroll distance**: Sets how far each button press scrolls, in pixels, with `scrollDistance`.
 - **Accessible names**: Names the carousel and its scroll buttons through the `ariaLabel`, `ariaLabel.scroll.left`, and `ariaLabel.scroll.right` slots.
 
-### Properties & Attributes
+### Properties and attributes
 
 | Properties     | Attributes     | Modifiers | Type    | Default | Description                                                                                                                                                               |
 | -------------- | -------------- | --------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,13 +45,13 @@ Displays a group of elements, such as flight date options or images, in a horizo
 | ariaLabel.scroll.left  | Text that screen readers announce for the left scroll button, for example "Show earlier dates". Defaults to "Scroll Left".              |
 | ariaLabel.scroll.right | Text that screen readers announce for the right scroll button, for example "Show later dates". Defaults to "Scroll Right".              |
 
-### CSS Shadow Parts
+### CSS shadow parts
 
 | Name    | Description                                                                    |
 | ------- | ------------------------------------------------------------------------------ |
 | wrapper | The scrollable `<div>` that wraps the scroll buttons and the slotted elements. |
 
-### CSS Custom Properties
+### CSS custom properties
 
 | Name                                  | Description                                                          |
 | ------------------------------------- | -------------------------------------------------------------------- |
