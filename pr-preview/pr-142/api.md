@@ -41,8 +41,8 @@ Displays a group of elements, such as flight date options or images, in a horizo
 | Name                   | Description                                                                                                                                                                                          |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | (default)              | The elements to scroll through, such as `auro-pane` elements or images.                                                                                                                              |
-| ariaLabel.scroll.left  | Text that screen readers announce for the left scroll button, for example "Show earlier dates". Defaults to "Scroll Left".                                                                           |
-| ariaLabel.scroll.right | Text that screen readers announce for the right scroll button, for example "Show later dates". Defaults to "Scroll Right".                                                                           |
+| ariaLabel.scroll.left  | Text that screen readers announce for the left scroll button, for example "Show earlier dates". Defaults to "Scroll left".                                                                           |
+| ariaLabel.scroll.right | Text that screen readers announce for the right scroll button, for example "Show later dates". Defaults to "Scroll right".                                                                           |
 | ariaLabel              | Text that screen readers announce as the carousel's name, for example "Flight date options". Required unless you set the deprecated `label` attribute, and takes priority over it when both are set. |
 
 ### CSS shadow parts
@@ -108,7 +108,7 @@ Displays a group of elements, such as flight date options or images, in a horizo
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Property & Attribute Examples
+## Property and attribute examples
 
 #### Center selected
 
@@ -291,7 +291,7 @@ Use the `scrollDistance` attribute to set how many pixels the carousel scrolls w
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Method Examples
+## Method examples
 
 #### Center element
 
@@ -415,7 +415,7 @@ This example doesn't use `centerSelected`, so it doesn't center the selected pan
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Slot Examples
+## Slot examples
 
 ### Aria label slots
 
