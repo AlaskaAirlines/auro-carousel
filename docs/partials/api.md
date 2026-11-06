@@ -16,7 +16,7 @@
 
 </auro-accordion>
 
-## Property & Attribute Examples
+## Property and attribute examples
 
 #### Center selected
 
@@ -69,7 +69,7 @@ Use the `scrollDistance` attribute to set how many pixels the carousel scrolls w
 
 </auro-accordion>
 
-## Method Examples
+## Method examples
 
 #### Center element
 
@@ -96,7 +96,7 @@ This example doesn't use `centerSelected`, so it doesn't center the selected pan
 </auro-accordion>
 
 
-## Slot Examples
+## Slot examples
 
 ### Aria label slots
 
