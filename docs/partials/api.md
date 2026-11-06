@@ -73,7 +73,7 @@ Use the `scrollDistance` attribute to set how many pixels the carousel scrolls w
 
 #### Center element
 
-Use the `centerElement` method to center an element inside the carousel, such as a pane when someone selects it. The element must be a descendant of the carousel, or the method throws an error. The carousel can only center the element when there's enough content on both sides of it.
+Use the `centerElement` method to center an element inside the carousel, such as a pane when someone selects it. The element must be a descendant of the carousel, or the method throws an error. The carousel can only center an element that has enough content on both sides of it.
 
 This example doesn't use `centerSelected`, so it doesn't center the selected pane on load. The method doesn't run on its own, so call it from an event handler, such as a click listener. The code below shows a vanilla JS example and a React example.
 
