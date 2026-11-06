@@ -51,8 +51,8 @@ import tokensCss from "./styles/tokens.scss";
  *
  * @slot - The elements to scroll through, such as `auro-pane` elements or images.
  * @slot ariaLabel - Text that screen readers announce as the carousel's name, for example "Flight date options". Required unless you set the deprecated `label` attribute, and takes priority over it when both are set.
- * @slot ariaLabel.scroll.left - Text that screen readers announce for the left scroll button, for example "Show earlier dates". Defaults to "Scroll Left".
- * @slot ariaLabel.scroll.right - Text that screen readers announce for the right scroll button, for example "Show later dates". Defaults to "Scroll Right".
+ * @slot ariaLabel.scroll.left - Text that screen readers announce for the left scroll button, for example "Show earlier dates". Defaults to "Scroll left".
+ * @slot ariaLabel.scroll.right - Text that screen readers announce for the right scroll button, for example "Show later dates". Defaults to "Scroll right".
  *
  * @csspart wrapper - The scrollable `<div>` that wraps the scroll buttons and the slotted elements.
  *
@@ -418,7 +418,7 @@ export class AuroCarousel extends LitElement {
         
         <!-- Left button -->
         <${this.buttonTag} 
-          aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel.scroll.left') || 'Scroll Left')}"
+          aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel.scroll.left') || 'Scroll left')}"
           shape="circle"
           variant="secondary" 
           @click=${() => this.handleClick(false)} 
@@ -434,7 +434,7 @@ export class AuroCarousel extends LitElement {
         
         <!-- Right button -->
         <${this.buttonTag} 
-          aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel.scroll.right') || 'Scroll Right')}"
+          aria-label="${ifDefined(this.runtimeUtils.getSlotText(this, 'ariaLabel.scroll.right') || 'Scroll right')}"
           shape="circle"
           variant="secondary" 
           @click=${() => this.handleClick(true)} 
