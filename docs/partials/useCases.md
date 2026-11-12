@@ -1,4 +1,4 @@
-The `<auro-carousel>` element should be used in situations where users may:
+Use `<auro-carousel>` when people need to:
 
-* Scroll through multiple flight date options or shoulder dates
-* Scroll through multiple images
+* Scroll through flight date options, such as dates just before and after a chosen date
+* Scroll through images

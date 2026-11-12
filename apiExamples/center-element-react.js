@@ -3,7 +3,8 @@
 
 const days = [...Array(28).keys()];
 
-<auro-carousel label="Flight options" ref={this.centerCarouselRef}>
+<auro-carousel ref={this.centerCarouselRef}>
+  <span slot="ariaLabel">Flight date options</span>
   {days.map((day, idx) => (
     //biome-ignore lint: not going to change the onclick event
     <auro-pane
